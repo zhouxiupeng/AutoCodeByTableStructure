@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+【账户信息】对象关系映射 配置 
+ @author 代码自动生成 113857118@qq.com
+ @date 2017-12
+ -->
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.bluemobi.dao.AccountDao">
+
+	<resultMap id="accountResultMap" type="com.bluemobi.po.Account">
+		<id property="accountId" column="account_id" />
+       <result property="userId" column="user_id" />
+       <result property="userType" column="user_type" />
+       <result property="status" column="status" />
+       <result property="createTime" column="create_time" />
+       <result property="updateTime" column="update_time" />
+	</resultMap>
+	<resultMap id="mapResultMap"  type="java.util.HashMap" extends="accountResultMap"></resultMap>
+	<resultMap id="pageResultMap"  type="java.util.HashMap" extends="accountResultMap"></resultMap>
+	
+	
+	<insert id="insert" parameterType="com.bluemobi.po.Account" useGeneratedKeys="true" keyProperty="accountId" >
+	   insert into account (
+	     account_id,
+	     user_id,
+	     user_type,
+	     status,
+	     create_time,
+	     update_time
+	   )values (
+	     #{accountId},
+	     #{userId},
+	     #{userType},
+	     #{status},
+	     #{createTime},
+	     #{updateTime}
+	   )
+	</insert>
+
+	<update id="update" parameterType="com.bluemobi.po.Account">
+		update account
+		<set>
+			<if test="accountId != null">
+				account_id=#{accountId},
+			</if>
+			<if test="userId != null">
+				user_id=#{userId},
+			</if>
+			<if test="userType != null">
+				user_type=#{userType},
+			</if>
+			<if test="status != null">
+				status=#{status},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="updateTime != null">
+				update_time=#{updateTime},
+			</if>
+		</set>
+		<where>
+			account_id=#{accountId} 
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="map">
+	   delete from 
+	     account 
+	   where 
+	    account_id=#{accountId} 
+	</delete>
+
+	<select id="selectObject" parameterType="map" resultMap="accountResultMap">
+	   select 
+	    account_id,
+	    user_id,
+	    user_type,
+	    status,
+	    create_time,
+	    update_time
+	   from account
+	   where 
+	    account_id=#{accountId} 
+	</select>
+	
+	<select id="selectObjectList" parameterType="map" resultMap="accountResultMap">
+	   select 
+	     account_id,
+	     user_id,
+	     user_type,
+	     status,
+	     create_time,
+	     update_time
+	   from account
+	   <where>
+	     <if test="accountId != null">
+	        account_id=#{accountId}
+	     </if>
+	     <if test="userId != null">
+	        and user_id=#{userId}
+	     </if>
+	     <if test="userType != null">
+	        and user_type=#{userType}
+	     </if>
+	     <if test="status != null">
+	        and status=#{status}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="updateTime != null">
+	        and update_time=#{updateTime}
+	     </if>
+	   </where>
+	</select>
+
+	<select id="selectMap" parameterType="map" resultMap="mapResultMap">
+	   select 
+	    account_id,
+	    user_id,
+	    user_type,
+	    status,
+	    create_time,
+	    update_time
+	   from account
+	   where 
+	    account_id=#{accountId} 
+	</select>
+
+	<select id="selectMapList" parameterType="map" resultMap="mapResultMap">
+	   select 
+	     account_id,
+	     user_id,
+	     user_type,
+	     status,
+	     create_time,
+	     update_time
+	   from account
+	   <where>
+	     <if test="accountId != null">
+	        account_id=#{accountId}
+	     </if>
+	     <if test="userId != null">
+	        and user_id=#{userId}
+	     </if>
+	     <if test="userType != null">
+	        and user_type=#{userType}
+	     </if>
+	     <if test="status != null">
+	        and status=#{status}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="updateTime != null">
+	        and update_time=#{updateTime}
+	     </if>
+	   </where>
+	</select>
+	
+	<select id="page" parameterType="map" resultMap="pageResultMap">
+	   select 
+	     account_id,
+	     user_id,
+	     user_type,
+	     status,
+	     create_time,
+	     update_time
+	<include refid="pageCondition" />
+	limit #{offset},#{rows}
+	</select>
+
+	<select id="pageCount" parameterType="map" resultType="int">
+	   select count(1)
+	   <include refid="pageCondition" />
+	</select>
+
+	<sql id="pageCondition">
+	   from account
+	   <where>
+	     <if test="accountId != null">
+	        account_id=#{accountId}
+	     </if>
+	     <if test="userId != null">
+	        and user_id=#{userId}
+	     </if>
+	     <if test="userType != null">
+	        and user_type=#{userType}
+	     </if>
+	     <if test="status != null">
+	        and status=#{status}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="updateTime != null">
+	        and update_time=#{updateTime}
+	     </if>
+	   </where>
+	</sql>
+
+	
+</mapper> 

@@ -1,0 +1,5 @@
+[2017-12-18 13:58:24 DEBUG][main][cache]Couldn't find template in cache for "Object.java"("en_US", utf-8, parsed); will try to load it.
+[2017-12-18 13:58:24 DEBUG][main][cache]TemplateLoader.findTemplateSource("Object_en_US.java"): Not found
+[2017-12-18 13:58:24 DEBUG][main][cache]TemplateLoader.findTemplateSource("Object_en.java"): Not found
+[2017-12-18 13:58:24 DEBUG][main][cache]TemplateLoader.findTemplateSource("Object.java"): Found
+[2017-12-18 13:58:24 DEBUG][main][cache]Loading template for "Object.java"("en_US", utf-8, parsed) from "/media/zxp/pro/java/CodeGenerator/AutoCodeByTableStructure/freeMarkerTemp/iyd/Object.java"

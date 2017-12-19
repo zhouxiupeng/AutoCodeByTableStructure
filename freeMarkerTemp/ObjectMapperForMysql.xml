@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+【${note}】对象关系映射 配置 
+ @author ${author} ${email}
+ @date ${timeMonth}
+ -->
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.bluemobi.dao${packageName}.${nameFU}Dao">
+
+	<resultMap id="${name}ResultMap" type="com.bluemobi.po${packageName}.${nameFU}">
+<#list pkPropertyList as pk>
+		<id property="${pk.name}" column="${pk.dbName}" />
+</#list>
+<#list propertyList as p>
+    <#assign isId = "false" />
+	<#list pkPropertyList as pk>
+		<#if p.dbName == pk.dbName>
+		     <#assign isId = "true" />
+		</#if>
+	</#list>
+	<#if isId == "false">
+       <result property="${p.name}" column="${p.dbName}" />
+    </#if>
+</#list>
+	</resultMap>
+	<resultMap id="mapResultMap"  type="java.util.HashMap" extends="${name}ResultMap"></resultMap>
+	<resultMap id="pageResultMap"  type="java.util.HashMap" extends="${name}ResultMap"></resultMap>
+	
+	
+	<insert id="insert" parameterType="com.bluemobi.po${packageName}.${nameFU}" useGeneratedKeys="true" keyProperty="<#list pkPropertyList as pk><#if pk_index==0>${pk.name}</#if></#list>" >
+	   insert into ${dbName} (
+	    <#list propertyList as p>
+	     ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	   )values (
+	    <#list propertyList as p>
+	     ${mybatisParaPrefix}${p.name}${mybatisParaSuffix}<#if p_has_next>,</#if>
+	</#list>
+	   )
+	</insert>
+
+	<update id="update" parameterType="com.bluemobi.po${packageName}.${nameFU}">
+		update ${dbName}
+		<set>
+		<#list propertyList as p>
+			<if test="${p.name} != null">
+				${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix},
+			</if>
+		</#list>
+		</set>
+		<where>
+		<#list pkPropertyList as pk>
+			<#if pk_index!=0> and</#if>${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} 
+		</#list>
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="map">
+	   delete from 
+	     ${dbName} 
+	   where 
+	   <#list pkPropertyList as pk>
+	   <#if pk_index!=0> and</#if> ${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} 
+	   </#list>
+	</delete>
+
+	<select id="selectObject" parameterType="map" resultMap="${name}ResultMap">
+	   select 
+	<#list propertyList as p>
+	    ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	   from ${dbName}
+	   where 
+	<#list pkPropertyList as pk>
+	   <#if pk_index!=0> and</#if> ${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} 
+	</#list>
+	</select>
+	
+	<select id="selectObjectList" parameterType="map" resultMap="${name}ResultMap">
+	   select 
+	<#list propertyList as p>
+	     ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	   from ${dbName}
+	   <where>
+	<#list propertyList as p>
+	     <if test="${p.name} != null">
+	       <#if p_index!=0> and</#if> ${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix}
+	     </if>
+	</#list>
+	   </where>
+	</select>
+
+	<select id="selectMap" parameterType="map" resultMap="mapResultMap">
+	   select 
+	<#list propertyList as p>
+	    ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	   from ${dbName}
+	   where 
+	<#list pkPropertyList as pk>
+	   <#if pk_index!=0> and</#if> ${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} 
+	   </#list>
+	</select>
+
+	<select id="selectMapList" parameterType="map" resultMap="mapResultMap">
+	   select 
+	<#list propertyList as p>
+	     ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	   from ${dbName}
+	   <where>
+	<#list propertyList as p>
+	     <if test="${p.name} != null">
+	       <#if p_index!=0> and</#if> ${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix}
+	     </if>
+	</#list>
+	   </where>
+	</select>
+	
+	<select id="page" parameterType="map" resultMap="pageResultMap">
+	   select 
+	<#list propertyList as p>
+	     ${p.dbName}<#if p_has_next>,</#if>
+	</#list>
+	<include refid="pageCondition" />
+	limit ${mybatisParaPrefix}offset${mybatisParaSuffix},${mybatisParaPrefix}rows${mybatisParaSuffix}
+	</select>
+
+	<select id="pageCount" parameterType="map" resultType="int">
+	   select count(1)
+	   <include refid="pageCondition" />
+	</select>
+
+	<sql id="pageCondition">
+	   from ${dbName}
+	   <where>
+	<#list propertyList as p>
+	     <if test="${p.name} != null">
+	       <#if p_index!=0> and</#if> ${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix}
+	     </if>
+	</#list>
+	   </where>
+	</sql>
+
+	
+</mapper> 

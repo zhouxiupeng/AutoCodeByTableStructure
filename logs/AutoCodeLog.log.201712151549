@@ -1,0 +1,15 @@
+[2017-12-15 15:49:55 DEBUG][main][cache]Couldn't find template in cache for "spring-duboo-provider.xml"("en_US", utf-8, parsed); will try to load it.
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-provider_en_US.xml"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-provider_en.xml"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-provider.xml"): Found
+[2017-12-15 15:49:56 DEBUG][main][cache]Loading template for "spring-duboo-provider.xml"("en_US", utf-8, parsed) from "/media/zxp/pro/java/CodeGenerator/AutoCodeByTableStructure/freeMarkerTemp/spring-duboo-provider.xml"
+[2017-12-15 15:49:56 DEBUG][main][cache]Couldn't find template in cache for "spring-duboo-consumer.xml"("en_US", utf-8, parsed); will try to load it.
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-consumer_en_US.xml"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-consumer_en.xml"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("spring-duboo-consumer.xml"): Found
+[2017-12-15 15:49:56 DEBUG][main][cache]Loading template for "spring-duboo-consumer.xml"("en_US", utf-8, parsed) from "/media/zxp/pro/java/CodeGenerator/AutoCodeByTableStructure/freeMarkerTemp/spring-duboo-consumer.xml"
+[2017-12-15 15:49:56 DEBUG][main][cache]Couldn't find template in cache for "temp.jsp"("en_US", utf-8, parsed); will try to load it.
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("temp_en_US.jsp"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("temp_en.jsp"): Not found
+[2017-12-15 15:49:56 DEBUG][main][cache]TemplateLoader.findTemplateSource("temp.jsp"): Found
+[2017-12-15 15:49:56 DEBUG][main][cache]Loading template for "temp.jsp"("en_US", utf-8, parsed) from "/media/zxp/pro/java/CodeGenerator/AutoCodeByTableStructure/freeMarkerTemp/temp.jsp"
