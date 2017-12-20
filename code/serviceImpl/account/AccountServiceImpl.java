@@ -1,12 +1,17 @@
-package com.bluemobi.serviceimpl;
+package com.yundong.payment.api.service.impl;
+
+import java.io.File;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.appcore.dao.MyBatisBaseDao;
-import com.appcore.service.impl.MybatisBaseServiceImpl;
-import com.bluemobi.dao.AccountDao;
-import com.bluemobi.service.AccountService;
+
+import com.yundong.payment.api.dao.IAccountDao;
+import com.yundong.payment.api.service.IAccountService;
+import com.yundong.payment.api.entity.Account;
 
 /**
  * 【账户信息】 服务类 实现类
@@ -15,7 +20,7 @@ import com.bluemobi.service.AccountService;
  * @date 2017-12
  * 
  */
-@Service(value = "accountService")
+@Service
 public class AccountServiceImpl  implements IAccountService {
 
     @Autowired
@@ -23,12 +28,12 @@ public class AccountServiceImpl  implements IAccountService {
 
 
     @Override
-    public int saveAccount(AccountVO _account) {
-    	return accountDaoImpl.saveAccount(_account);
+    public int saveAccount(Account _account) {
+    	return this.accountDaoImpl.saveAccount(_account);
     }
 
     @Override
-    public AccountVO getAccountByID(Long	_account_id) {
-    	return accountDaoImpl.getAccountByID(_account_id);
+    public Account getAccountByID(Long	_account_id) {
+    	return this.accountDaoImpl.getAccountByID(_account_id);
     }
 }

@@ -8,12 +8,15 @@ import java.util.List;
 
 public abstract class AbstractDBField extends AbstractField
 {
-  public String dbName;
+  public String dbName;//实际上都是表的名称
   public String dbNameFU;
   public String dbNameAL;
   public String dbNameAU;
   private String isDropDown;
-  private List<DropDown> dropDownList;
+  public String dbNameT;//数据库名称
+  
+
+private List<DropDown> dropDownList;
 
   public AbstractDBField()
   {
@@ -31,6 +34,13 @@ public abstract class AbstractDBField extends AbstractField
     this.dbNameAL = dbName.toLowerCase();
   }
 
+  public String getDbNameT() {
+		return dbNameT;
+	}
+
+	public void setDbNameT(String dbNameT) {
+		this.dbNameT = dbNameT;
+	}
   public String getDbNameFU() {
     return this.dbNameFU; }
 

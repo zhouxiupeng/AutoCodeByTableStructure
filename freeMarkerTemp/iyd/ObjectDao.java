@@ -1,6 +1,6 @@
-package com.bluemobi.dao${packageName};
+package com.yundong.${dbNameT}api.dao${packageName};
 
-import com.appcore.dao.MyBatisBaseDao;
+import com.yundong.${dbNameT}api.entity.${nameFU};
 
 /**
  * 【${note}】 数据访问对象 接口
@@ -10,7 +10,7 @@ import com.appcore.dao.MyBatisBaseDao;
  * 
  */
 public interface I${nameFU}Dao{
-	 public String getPrefix();
-	 public int save${nameFU}(${nameFU}VO _${name});
-	 public ${nameFU}VO get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>);
+	  String getPrefix();
+	  int save${nameFU}(${nameFU} _${name});
+	  ${nameFU} get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>);
 }

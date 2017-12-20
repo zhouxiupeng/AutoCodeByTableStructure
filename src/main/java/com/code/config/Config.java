@@ -14,6 +14,7 @@ import org.jdom.input.SAXBuilder;
 public class Config extends AbstractObject
 {
   private static Config config;
+  public String dbName;
   public String configPath;
   public String outputPath;
   public String time;
@@ -27,6 +28,7 @@ public class Config extends AbstractObject
   public boolean isSubpackage;
   public String[] tableFixs;
   public String po;
+  public String entity;
   public String mapper;
   public String service;
   public String dao;
@@ -97,6 +99,8 @@ public class Config extends AbstractObject
 
     if (this.isWriteToProject) {
       this.po = root.getAttributeValue("po");
+      this.entity = root.getAttributeValue("entity");
+      this.dbName = root.getAttributeValue("dbname");
       this.mapper = root.getAttributeValue("mapper");
       this.dao = root.getAttributeValue("dao");
       this.daoImpl = root.getAttributeValue("daoImpl");

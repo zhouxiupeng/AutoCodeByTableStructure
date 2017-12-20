@@ -1,6 +1,7 @@
-package com.bluemobi.service;
+package com.yundong.payment.api.service;
 
-import com.appcore.service.MybatisBaseService;
+import java.util.List;
+import com.yundong.payment.api.entity.Account;
 
 /**
  * 【账户信息】 服务类 接口
@@ -11,7 +12,7 @@ import com.appcore.service.MybatisBaseService;
  */
 public interface IAccountService {
 	
-    public int saveAccount(AccountVO _account);
-    public AccountVO getAccountByID(Long	_account_id)
+    int saveAccount(Account _account);
+    Account getAccountByID(Long	_account_id);
 
 }

@@ -28,5 +28,9 @@
 	
 	<!-- 调用服务:【账户信息】 -->
 	<dubbo:reference id="accountService" interface="com.bluemobi.service.AccountService" />
+	<!-- 调用服务:【账户余额表】 -->
+	<dubbo:reference id="balanceService" interface="com.bluemobi.service.BalanceService" />
+	<!-- 调用服务:【账号交易明细数据】 -->
+	<dubbo:reference id="balanceRecordService" interface="com.bluemobi.service.BalanceRecordService" />
 
 </beans>

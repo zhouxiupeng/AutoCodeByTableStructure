@@ -138,6 +138,7 @@ public class DBUtils
 
       MyClass myClass = new MyClass();
       myClass.setDbName(tabelName);
+      myClass.setDbNameT(Config.getInstall().dbName);
       myClass.setName(name);
       myClass.setNote(remarks);
       myClass.setModuleName(moduleName);

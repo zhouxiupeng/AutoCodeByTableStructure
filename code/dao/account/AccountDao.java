@@ -1,6 +1,6 @@
-package com.bluemobi.dao;
+package com.yundong.payment.api.dao;
 
-import com.appcore.dao.MyBatisBaseDao;
+import com.yundong.payment.api.entity.Account;
 
 /**
  * 【账户信息】 数据访问对象 接口
@@ -10,7 +10,7 @@ import com.appcore.dao.MyBatisBaseDao;
  * 
  */
 public interface IAccountDao{
-	 public String getPrefix();
-	 public int saveAccount(AccountVO _account);
-	 public AccountVO getAccountByID(Long	_account_id);
+	  String getPrefix();
+	  int saveAccount(Account _account);
+	  Account getAccountByID(Long	_account_id);
 }

@@ -1,12 +1,17 @@
-package com.bluemobi.serviceimpl${packageName};
+package com.yundong.${dbNameT}api.service.impl${packageName};
+
+import java.io.File;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.appcore.dao.MyBatisBaseDao;
-import com.appcore.service.impl.MybatisBaseServiceImpl;
-import com.bluemobi.dao${packageName}.${nameFU}Dao;
-import com.bluemobi.service${packageName}.${nameFU}Service;
+
+import com.yundong.${dbNameT}api.dao${packageName}.I${nameFU}Dao;
+import com.yundong.${dbNameT}api.service${packageName}.I${nameFU}Service;
+import com.yundong.${dbNameT}api.entity.${nameFU};
 
 /**
  * 【${note}】 服务类 实现类
@@ -15,7 +20,7 @@ import com.bluemobi.service${packageName}.${nameFU}Service;
  * @date ${timeMonth}
  * 
  */
-@Service(value = "${name}Service")
+@Service
 public class ${nameFU}ServiceImpl  implements I${nameFU}Service {
 
     @Autowired
@@ -23,12 +28,12 @@ public class ${nameFU}ServiceImpl  implements I${nameFU}Service {
 
 
     @Override
-    public int save${nameFU}(${nameFU}VO _${name}) {
+    public int save${nameFU}(${nameFU} _${name}) {
     	return this.${name}DaoImpl.save${nameFU}(_${name});
     }
 
     @Override
-    public ${nameFU}VO get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>) {
+    public ${nameFU} get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>) {
     	return this.${name}DaoImpl.get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>_${pk.dbName}</#list>);
     }
 }

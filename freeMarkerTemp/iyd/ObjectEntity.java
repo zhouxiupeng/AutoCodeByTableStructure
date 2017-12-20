@@ -1,4 +1,4 @@
-package com.yundong.${dbNameT}api.vo${packageName};
+package com.yundong.${dbNameT}api.entity${packageName};
 
 <#assign hasBigDecimal = "" />
 <#assign hasDate = "" />
@@ -25,7 +25,7 @@ import java.io.Serializable;
  * @date ${timeMonth}
  * 
  */
-public class ${nameFU}VO implements Serializable {
+public class ${nameFU} implements Serializable {
 
     public static final long serialVersionUID = 1L;
 
@@ -49,7 +49,7 @@ public class ${nameFU}VO implements Serializable {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
-        sb.append("${nameFU}VO");
+        sb.append("${nameFU}");
         <#list propertyList as p>
         sb.append("<#if p_index==0>{</#if><#if p_index!=0>, </#if>${p.name}=").append(${p.name});
         </#list>
@@ -61,8 +61,8 @@ public class ${nameFU}VO implements Serializable {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof ${nameFU}VO) {
-            ${nameFU}VO ${name} = (${nameFU}VO) obj;
+        if (obj instanceof ${nameFU}) {
+            ${nameFU} ${name} = (${nameFU}) obj;
             if (<#list pkPropertyList as pk>this.get${pk.nameFU}().equals(${name}.get${pk.nameFU}())<#if pk_has_next> && </#if></#list>) {
                 return true;
             }

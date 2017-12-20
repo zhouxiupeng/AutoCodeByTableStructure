@@ -28,6 +28,7 @@
  -->
 
 <config  
+    dbname="payment."
 	isSubpackage="false"
 	isWriteToProject = "true"
 	isForceWriteToProject = "true"
@@ -43,6 +44,7 @@
 	service = "/media/zxp/pro/runnerbar/orther/autoCode/service/"
 	serviceImpl = "/media/zxp/pro/runnerbar/orther/autoCode/service/serviceImpl/"
 	po = "/media/zxp/pro/runnerbar/orther/autoCode/po/"
+	entity = "/media/zxp/pro/runnerbar/orther/autoCode/entity/"
 	mapper = "/media/zxp/pro/runnerbar/orther/autoCode/mapper/"
 	dubooProvider = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
 	dubooConsumer = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"

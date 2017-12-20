@@ -35,6 +35,10 @@
 
 	<!-- 提供服务:【账户信息】 -->
 	<dubbo:service interface="com.bluemobi.service.AccountService" ref="accountService" />
+	<!-- 提供服务:【账户余额表】 -->
+	<dubbo:service interface="com.bluemobi.service.BalanceService" ref="balanceService" />
+	<!-- 提供服务:【账号交易明细数据】 -->
+	<dubbo:service interface="com.bluemobi.service.BalanceRecordService" ref="balanceRecordService" />
 
 	
 </beans>

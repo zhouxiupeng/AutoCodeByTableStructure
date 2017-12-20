@@ -1,8 +1,8 @@
-package com.bluemobi.po;
+package com.yundong.payment.api.vo;
 
 import java.util.Date;
 
-import com.appcore.model.AbstractObject;
+import java.io.Serializable;
 
 /**
  * 【账户信息】持久化对象 数据库表：account
@@ -11,7 +11,7 @@ import com.appcore.model.AbstractObject;
  * @date 2017-12
  * 
  */
-public class Account extends AbstractObject {
+public class AccountVO implements Serializable {
 
     public static final long serialVersionUID = 1L;
 
@@ -91,7 +91,7 @@ public class Account extends AbstractObject {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
-        sb.append("Account");
+        sb.append("AccountVO");
         sb.append("{accountId=").append(accountId);
         sb.append(", userId=").append(userId);
         sb.append(", userType=").append(userType);
@@ -106,8 +106,8 @@ public class Account extends AbstractObject {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof Account) {
-            Account account = (Account) obj;
+        if (obj instanceof AccountVO) {
+            AccountVO account = (AccountVO) obj;
             if (this.getAccountId().equals(account.getAccountId())) {
                 return true;
             }
