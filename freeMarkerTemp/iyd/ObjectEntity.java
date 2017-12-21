@@ -1,4 +1,4 @@
-package com.yundong.${dbNameT}api.entity${packageName};
+package com.yundong.${dbNameT}entity${packageName};
 
 <#assign hasBigDecimal = "" />
 <#assign hasDate = "" />

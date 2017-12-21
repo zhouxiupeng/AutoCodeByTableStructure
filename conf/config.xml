@@ -34,21 +34,21 @@
 	isForceWriteToProject = "true"
 	tableFixs = "t_,v_"
 	marker_path="//iyd//"
-
-	controller = "/media/zxp/pro/runnerbar/orther/autoCode/controller/"
+    mainpath="/home/zxp/eclipse-workspace/yundong-payment/yundong-payment-server/src/main/java/com/yundong/payment/"
+	controller = "$mainpath+controller/"
 	
-	jsp = "/media/zxp/pro/runnerbar/orther/autoCode/jsp/"
-	js = "/media/zxp/pro/runnerbar/orther/autoCode/js/"
-	dao = "/media/zxp/pro/runnerbar/orther/autoCode/dao/"
-	daoImpl="/media/zxp/pro/runnerbar/orther/autoCode/dao/impl/"
-	service = "/media/zxp/pro/runnerbar/orther/autoCode/service/"
-	serviceImpl = "/media/zxp/pro/runnerbar/orther/autoCode/service/serviceImpl/"
-	po = "/media/zxp/pro/runnerbar/orther/autoCode/po/"
-	entity = "/media/zxp/pro/runnerbar/orther/autoCode/entity/"
-	mapper = "/media/zxp/pro/runnerbar/orther/autoCode/mapper/"
+	jsp = "$mainpath+jsp/"
+	js = "$mainpath+js/"
+	dao = "$mainpath+dao/"
+	daoImpl="$mainpath+dao/impl/"
+	service = "$mainpath+service/"
+	serviceImpl ="$mainpath+service/impl/"
+	po = "$mainpath+vo/"
+	entity = "$mainpath+entity/"
+	mapper = "$mainpath+mapper/"
 	dubooProvider = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
 	dubooConsumer = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
-	tempJsp = "/media/zxp/pro/runnerbar/orther/autoCode/tempJsp/"
+	tempJsp = "$mainpath+tempJsp/"
 	>
 
 <!-- 

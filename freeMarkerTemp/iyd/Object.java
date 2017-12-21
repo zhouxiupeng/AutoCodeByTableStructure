@@ -1,4 +1,4 @@
-package com.yundong.${dbNameT}api.vo${packageName};
+package com.yundong.${dbNameT}vo${packageName};
 
 <#assign hasBigDecimal = "" />
 <#assign hasDate = "" />

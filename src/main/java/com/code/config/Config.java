@@ -96,25 +96,68 @@ public class Config extends AbstractObject
     if(StringUtil.isNotEmpty(root.getAttributeValue("marker_path"))){
     	markerPath=root.getAttributeValue("marker_path");
     }
-
+    String mainpath="";
+    if(StringUtil.isNotEmpty(root.getAttributeValue("mainpath"))){
+    	mainpath=root.getAttributeValue("mainpath");
+    }
     if (this.isWriteToProject) {
       this.po = root.getAttributeValue("po");
+      if(StringUtil.isNotEmpty(this.po) && this.po.indexOf("$mainpath+")>-1) {
+    	  this.po=this.po.replace("$mainpath+", mainpath);
+      }
       this.entity = root.getAttributeValue("entity");
+      if(StringUtil.isNotEmpty(this.entity) && this.entity.indexOf("$mainpath+")>-1) {
+    	  this.entity=this.entity.replace("$mainpath+", mainpath);
+      }
+      //数据库的名称，但是系统用用dbname表示了表的名称，所以后面系统会用dbNameT表示真实的数据库的名称
       this.dbName = root.getAttributeValue("dbname");
+      if(StringUtil.isNotEmpty(this.dbName)&& this.dbName.indexOf("$mainpath+")>-1) {
+    	  this.dbName=this.dbName.replace("$mainpath+", mainpath);
+      }
       this.mapper = root.getAttributeValue("mapper");
+      if(StringUtil.isNotEmpty(this.mapper) && this.mapper.indexOf("$mainpath+")>-1) {
+    	  this.mapper=this.mapper.replace("$mainpath+", mainpath);
+      }
       this.dao = root.getAttributeValue("dao");
+      if(StringUtil.isNotEmpty(this.dao) && this.dao.indexOf("$mainpath+")>-1) {
+    	  this.dao=this.dao.replace("$mainpath+", mainpath);
+      }
       this.daoImpl = root.getAttributeValue("daoImpl");
+      if(StringUtil.isNotEmpty(this.daoImpl)&& this.daoImpl.indexOf("$mainpath+")>-1) {
+    	  this.daoImpl=this.daoImpl.replace("$mainpath+", mainpath);
+      }
       this.service = root.getAttributeValue("service");
+      if(StringUtil.isNotEmpty(this.service)&& this.service.indexOf("$mainpath+")>-1) {
+    	  this.service=this.service.replace("$mainpath+", mainpath);
+      }
       this.serviceImpl = root.getAttributeValue("serviceImpl");
-
+      if(StringUtil.isNotEmpty(this.serviceImpl)&& this.serviceImpl.indexOf("$mainpath+")>-1) {
+    	  this.serviceImpl=this.serviceImpl.replace("$mainpath+", mainpath);
+      }
       this.controller = root.getAttributeValue("controller");
+      if(StringUtil.isNotEmpty(this.controller)&& this.controller.indexOf("$mainpath+")>-1) {
+    	  this.controller=this.controller.replace("$mainpath+", mainpath);
+      }
       this.jsp = root.getAttributeValue("jsp");
+      if(StringUtil.isNotEmpty(this.jsp)&& this.jsp.indexOf("$mainpath+")>-1) {
+    	  this.jsp=this.jsp.replace("$mainpath+", mainpath);
+      }
       this.js = root.getAttributeValue("js");
-
+      if(StringUtil.isNotEmpty(this.js)&& this.js.indexOf("$mainpath+")>-1) {
+    	  this.js=this.js.replace("$mainpath+", mainpath);
+      }
       this.tempJsp = root.getAttributeValue("tempJsp");
-
+      if(StringUtil.isNotEmpty(this.tempJsp)&& this.tempJsp.indexOf("$mainpath+")>-1) {
+    	  this.tempJsp=this.tempJsp.replace("$mainpath+", mainpath);
+      }
       this.dubooProvider = root.getAttributeValue("dubooProvider");
+      if(StringUtil.isNotEmpty(this.dubooProvider)&& this.dubooProvider.indexOf("$mainpath+")>-1) {
+    	  this.dubooProvider=this.dubooProvider.replace("$mainpath+", mainpath);
+      }
       this.dubooConsumer = root.getAttributeValue("dubooConsumer");
+      if(StringUtil.isNotEmpty(this.dubooConsumer)&& this.dubooConsumer.indexOf("$mainpath+")>-1) {
+    	  this.dubooConsumer=this.dubooConsumer.replace("$mainpath+", mainpath);
+      }
     }
 
     this.author = "代码自动生成";//StringUtil.bbToStr(new byte[] { 65, 117, 116, 111, 67, 111, 100, 101 });

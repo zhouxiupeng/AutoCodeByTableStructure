@@ -1,4 +1,4 @@
-package com.yundong.${dbNameT}api.dao.impl${packageName};
+package com.yundong.${dbNameT}dao.impl${packageName};
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.stereotype.Repository;
 import com.yundong.api.util.ConstUtil;
 
 import com.yundong.api.dao.AbstractDao;
-import com.yundong.${dbNameT}api.dao${packageName}.I${nameFU}Dao;
-import com.yundong.${dbNameT}api.entity.${nameFU};
+import com.yundong.${dbNameT}dao${packageName}.I${nameFU}Dao;
+import com.yundong.${dbNameT}entity.${nameFU};
 
 /**
  * 【${note}】 数据访问对象 实现类

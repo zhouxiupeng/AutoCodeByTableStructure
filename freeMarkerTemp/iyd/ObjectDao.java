@@ -1,6 +1,6 @@
-package com.yundong.${dbNameT}api.dao${packageName};
+package com.yundong.${dbNameT}dao${packageName};
 
-import com.yundong.${dbNameT}api.entity.${nameFU};
+import com.yundong.${dbNameT}entity.${nameFU};
 
 /**
  * 【${note}】 数据访问对象 接口

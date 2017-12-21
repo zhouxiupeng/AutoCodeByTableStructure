@@ -1,4 +1,4 @@
-package com.yundong.${dbNameT}api.service.impl${packageName};
+package com.yundong.${dbNameT}service.impl${packageName};
 
 import java.io.File;
 import java.util.Date;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import com.yundong.${dbNameT}api.dao${packageName}.I${nameFU}Dao;
-import com.yundong.${dbNameT}api.service${packageName}.I${nameFU}Service;
-import com.yundong.${dbNameT}api.entity.${nameFU};
+import com.yundong.${dbNameT}dao${packageName}.I${nameFU}Dao;
+import com.yundong.${dbNameT}service${packageName}.I${nameFU}Service;
+import com.yundong.${dbNameT}entity.${nameFU};
 
 /**
  * 【${note}】 服务类 实现类

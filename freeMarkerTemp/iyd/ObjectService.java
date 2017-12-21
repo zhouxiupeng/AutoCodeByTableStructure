@@ -1,7 +1,7 @@
-package com.yundong.${dbNameT}api.service${packageName};
+package com.yundong.${dbNameT}service${packageName};
 
 import java.util.List;
-import com.yundong.${dbNameT}api.entity.${nameFU};
+import com.yundong.${dbNameT}entity.${nameFU};
 
 /**
  * 【${note}】 服务类 接口
