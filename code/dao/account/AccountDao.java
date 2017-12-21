@@ -1,6 +1,6 @@
-package com.yundong.payment.api.dao;
+package com.yundong.payment.dao;
 
-import com.yundong.payment.api.entity.Account;
+import com.yundong.payment.entity.Account;
 
 /**
  * 【账户信息】 数据访问对象 接口

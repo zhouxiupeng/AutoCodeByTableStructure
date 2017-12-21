@@ -1,4 +1,4 @@
-package com.yundong.payment.api.vo;
+package com.yundong.payment.vo;
 
 import java.util.Date;
 

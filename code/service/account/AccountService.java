@@ -1,7 +1,7 @@
-package com.yundong.payment.api.service;
+package com.yundong.payment.service;
 
 import java.util.List;
-import com.yundong.payment.api.entity.Account;
+import com.yundong.payment.entity.Account;
 
 /**
  * 【账户信息】 服务类 接口
