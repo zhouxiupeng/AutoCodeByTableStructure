@@ -25,6 +25,10 @@ config.xml中变量marker_path定义自定义模版组的路径，注意，是�
 
 变量dbname 表示数据的名称，但是，原来的系统变量用他做为了表的名称，我也没改以前的逻辑，在模版参数中重新定义了dbNameT表是数据库的名称。
 
+#关于运行
+
+配置好数据库链接后，直接运行AutoCodeMain.java即可
+
 #测试数据库的表
 
 CREATE TABLE IF NOT EXISTS `payment`.`account` (
