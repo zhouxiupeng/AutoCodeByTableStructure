@@ -69,4 +69,22 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
      }
      return null;
    }
+  @Override
+  public int update${nameFU}(${nameFU} _${name}) {
+	  StringBuilder strSql=new StringBuilder();
+  	 strSql.append("update "+ConstUtil.database_name+".${dbName}  set "); 
+		<#list propertyList as p>
+			<if test="${p.name} != null">
+			strSql.append("${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix},");
+			</if>
+		</#list>
+		 
+		<where>
+		<#list pkPropertyList as pk>
+		strSql.append("<#if pk_index!=0> and</#if>${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} ");
+		</#list>
+		</where>
+		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(_${name});
+		return namedJdbcTemplate.update(strSql.toString(), paramSource);
+  }
 }

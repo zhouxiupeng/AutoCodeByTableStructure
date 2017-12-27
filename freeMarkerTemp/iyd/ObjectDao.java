@@ -13,4 +13,5 @@ public interface I${nameFU}Dao{
 	  String getPrefix();
 	  int save${nameFU}(${nameFU} _${name});
 	  ${nameFU} get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>);
+	  int update${nameFU}(${nameFU} _${name});
 }

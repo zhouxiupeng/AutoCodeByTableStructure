@@ -20,9 +20,9 @@ public class AccountVO implements Serializable {
     // 用户UID
     private Long userId;
     // 账户类型  1:个人账户;2:企业账户;
-    private Byte userType;
+    private Short userType;
     // 用户状态: -1.删除 ,0.冻结. 1. 正常
-    private Byte status;
+    private Short status;
     // 创建时间，默认为0
     private Date createTime;
     // 
@@ -49,22 +49,22 @@ public class AccountVO implements Serializable {
     }
 
     /** 获取 账户类型  1:个人账户;2:企业账户; */
-    public Byte getUserType() {
+    public Short getUserType() {
         return userType;
     }
 
     /** 设置 账户类型  1:个人账户;2:企业账户; */
-    public void setUserType(Byte userType) {
+    public void setUserType(Short userType) {
         this.userType = userType;
     }
 
     /** 获取 用户状态: -1.删除 ,0.冻结. 1. 正常 */
-    public Byte getStatus() {
+    public Short getStatus() {
         return status;
     }
 
     /** 设置 用户状态: -1.删除 ,0.冻结. 1. 正常 */
-    public void setStatus(Byte status) {
+    public void setStatus(Short status) {
         this.status = status;
     }
 

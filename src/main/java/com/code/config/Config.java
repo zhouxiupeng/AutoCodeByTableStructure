@@ -29,6 +29,7 @@ public class Config extends AbstractObject
   public String[] tableFixs;
   public String po;
   public String entity;
+  public String createentity;
   public String mapper;
   public String service;
   public String dao;
@@ -108,6 +109,10 @@ public class Config extends AbstractObject
       this.entity = root.getAttributeValue("entity");
       if(StringUtil.isNotEmpty(this.entity) && this.entity.indexOf("$mainpath+")>-1) {
     	  this.entity=this.entity.replace("$mainpath+", mainpath);
+      }
+      this.createentity = root.getAttributeValue("createentity");
+      if(StringUtil.isNotEmpty(this.createentity) && this.createentity.indexOf("$mainpath+")>-1) {
+    	  this.createentity=this.createentity.replace("$mainpath+", mainpath);
       }
       //数据库的名称，但是系统用用dbname表示了表的名称，所以后面系统会用dbNameT表示真实的数据库的名称
       this.dbName = root.getAttributeValue("dbname");

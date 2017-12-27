@@ -23,6 +23,8 @@
 	               也可以在地址栏输入   http://localhost:8000/nodo/[表名去下划线驼峰式名]/index 直接查看，如：http://localhost:8000/nodo/adminUser/index
 	               
 	marker_path:    模版路径，默认空，直接取freeMarkerTemp的路径,新的路径，是在默认路径的基础上增加
+	
+	dbname  :数据库的名称，程序模版变量dbname表示数据库表的名称，因此，模版变量中用dbNameT代表是数据库的名称
 	版本：2.0  
 	日期：2015.12.9
  -->
@@ -34,7 +36,7 @@
 	isForceWriteToProject = "true"
 	tableFixs = "t_,v_"
 	marker_path="//iyd//"
-    mainpath="/home/zxp/eclipse-workspace/yundong-payment/yundong-payment-server/src/main/java/com/yundong/payment/"
+    mainpath="/media/zxp/pro/runnerbar/orther/autoCode/"
 	controller = "$mainpath+controller/"
 	
 	jsp = "$mainpath+jsp/"
@@ -45,6 +47,7 @@
 	serviceImpl ="$mainpath+service/impl/"
 	po = "$mainpath+vo/"
 	entity = "$mainpath+entity/"
+	createentity = "$mainpath+createentity/"
 	mapper = "$mainpath+mapper/"
 	dubooProvider = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
 	dubooConsumer = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"

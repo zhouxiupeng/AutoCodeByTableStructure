@@ -14,5 +14,5 @@ public interface IAccountService {
 	
     int saveAccount(Account _account);
     Account getAccountByID(Long	_account_id);
-
+    int updateAccount(Account _account);
 }

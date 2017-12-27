@@ -39,7 +39,8 @@ public class FreeMarkerWriter {
 		}
 		
 		if ((outFileFullName.endsWith(".jsp"))
-				|| (outFileFullName.endsWith(".js"))) {
+				|| (outFileFullName.endsWith(".js"))
+				|| (outFileFullName.endsWith(".txt"))) {
 			iValid = 1;
 		}
 		if (iValid<0) {

@@ -36,4 +36,8 @@ public class ${nameFU}ServiceImpl  implements I${nameFU}Service {
     public ${nameFU} get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>) {
     	return this.${name}DaoImpl.get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>_${pk.dbName}</#list>);
     }
+    @Override
+    public int update${nameFU}(${nameFU} _${name}) {
+    	return this.${name}DaoImpl.update${nameFU}(_${name});
+    }
 }

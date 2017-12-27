@@ -75,6 +75,7 @@ public class AutoCodeMain
 
       String po = Config.getInstall().po + packageName + myClass.getNameFU() + "VO.java";
       String entity = Config.getInstall().entity + packageName + myClass.getNameFU() + ".java";
+      String createentity = Config.getInstall().createentity + packageName + myClass.getNameFU() + ".txt";
       String mapper = Config.getInstall().mapper + packageName + myClass.getNameFU() + "Mapper.xml";
 
       String dao = Config.getInstall().dao + packageName + "I"+myClass.getNameFU() + "Dao.java";
@@ -98,6 +99,7 @@ public class AutoCodeMain
 
       if (StringUtil.isNotEmpty(Config.getInstall().po)) FreeMarkerWriter.write("Object.java", po, myClass, isForceWriteToProject);
       if (StringUtil.isNotEmpty(Config.getInstall().entity)) FreeMarkerWriter.write("ObjectEntity.java", entity, myClass, isForceWriteToProject);
+      if (StringUtil.isNotEmpty(Config.getInstall().createentity)) FreeMarkerWriter.write("CreateEntity.txt", createentity, myClass, isForceWriteToProject);
       if (StringUtil.isNotEmpty(Config.getInstall().mapper)) FreeMarkerWriter.write("ObjectMapperFor" + DBUtils.getMapperSuffix() + ".xml", mapper, myClass, isForceWriteToProject);
 
       if (StringUtil.isNotEmpty(Config.getInstall().dao)) FreeMarkerWriter.write("ObjectDao.java", dao, myClass, isForceWriteToProject);
@@ -118,6 +120,7 @@ public class AutoCodeMain
 
     String objectName2 = Config.getInstall().outputPath + "po//" + moduleName + myClass.getNameFU() + ".java";
     String entityName2 = Config.getInstall().outputPath + "entity//" + moduleName + myClass.getNameFU() + ".java";
+    String createentityName2 = Config.getInstall().outputPath + "createentity//" + moduleName + myClass.getNameFU() + ".txt";
     String mapper2 = Config.getInstall().outputPath + "mapper//" + moduleName + myClass.getNameFU() + "Mapper.xml";
     String iDaoName2 = Config.getInstall().outputPath + "dao//" + moduleName + myClass.getNameFU() + "Dao.java";
 
@@ -139,6 +142,7 @@ public class AutoCodeMain
 
     FreeMarkerWriter.write("Object.java", objectName2, myClass, true);
     FreeMarkerWriter.write("ObjectEntity.java", entityName2, myClass, true);
+    FreeMarkerWriter.write("CreateEntity.txt", createentityName2, myClass, true);
     FreeMarkerWriter.write("ObjectMapperFor" + DBUtils.getMapperSuffix() + ".xml", mapper2, myClass, true);
 
     FreeMarkerWriter.write("ObjectDao.java", iDaoName2, myClass, true);

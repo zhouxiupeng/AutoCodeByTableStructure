@@ -71,8 +71,8 @@ public class JavaTypeResolverDefaultImpl
 
     this.typeMap.put(Integer.valueOf(93), new JdbcTypeInformation("TIMESTAMP", new FullyQualifiedJavaType(Date.class.getName())));
 
-    this.typeMap.put(Integer.valueOf(-6), new JdbcTypeInformation("TINYINT", new FullyQualifiedJavaType(Byte.class.getName())));
-
+//    this.typeMap.put(Integer.valueOf(-6), new JdbcTypeInformation("TINYINT", new FullyQualifiedJavaType(Byte.class.getName())));
+    this.typeMap.put(Integer.valueOf(-6), new JdbcTypeInformation("TINYINT", new FullyQualifiedJavaType(Short.class.getName())));
     this.typeMap.put(Integer.valueOf(-3), new JdbcTypeInformation("VARBINARY", new FullyQualifiedJavaType("byte[]")));
 
     this.typeMap.put(Integer.valueOf(12), new JdbcTypeInformation("VARCHAR", new FullyQualifiedJavaType(String.class.getName())));

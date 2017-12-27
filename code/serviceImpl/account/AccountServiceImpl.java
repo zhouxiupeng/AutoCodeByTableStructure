@@ -36,4 +36,8 @@ public class AccountServiceImpl  implements IAccountService {
     public Account getAccountByID(Long	_account_id) {
     	return this.accountDaoImpl.getAccountByID(_account_id);
     }
+    @Override
+    public int updateAccount(Account _account) {
+    	return this.accountDaoImpl.updateAccount(_account);
+    }
 }
