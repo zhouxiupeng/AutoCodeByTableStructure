@@ -57,7 +57,8 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
     	strSql.append("select "+ConstUtil.database_name+".${dbName} ("); 
     	<#list propertyList as p>
     	strSql.append("${p.dbName}<#if p_has_next>,</#if>");
-	    </#list>	  
+	    </#list>	
+	    strSql.append(")  from "+ConstUtil.database_name+".${dbName}  ");
 	 MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		<#list pkPropertyList as pk>
 		<#if pk_index!=0> and</#if>
@@ -73,17 +74,14 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
   public int update${nameFU}(${nameFU} _${name}) {
 	  StringBuilder strSql=new StringBuilder();
   	 strSql.append("update "+ConstUtil.database_name+".${dbName}  set "); 
-		<#list propertyList as p>
-			<if test="${p.name} != null">
-			strSql.append("${p.dbName}=${mybatisParaPrefix}${p.name}${mybatisParaSuffix},");
-			</if>
+		<#list propertyList as p>	
+		strSql.append("${p.dbName}=${maoHao}${p.name},");		
 		</#list>
-		 
-		<where>
+		strSql.append(" where ");
 		<#list pkPropertyList as pk>
-		strSql.append("<#if pk_index!=0> and</#if>${pk.dbName}=${mybatisParaPrefix}${pk.name}${mybatisParaSuffix} ");
+		strSql.append("<#if pk_index!=0> and</#if>${pk.dbName}=${maoHao}${pk.name} ");
 		</#list>
-		</where>
+		
 		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(_${name});
 		return namedJdbcTemplate.update(strSql.toString(), paramSource);
   }
