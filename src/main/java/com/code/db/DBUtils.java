@@ -161,6 +161,7 @@ public class DBUtils
       noPKpropertyList.removeAll(myClass.getPkPropertyList());
       myClass.setNoPKpropertyList(noPKpropertyList);
 
+      //添加索引列，参照 http://blog.csdn.net/chen_zw/article/details/18816599
       l.add(myClass);
     }
     return l;
