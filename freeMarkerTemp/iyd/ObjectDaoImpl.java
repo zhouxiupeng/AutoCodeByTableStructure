@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 
-import com.yundong.api.util.ConstUtil;
+import com.yundong.payment.common.paymentUtil;
 
 import com.yundong.api.dao.AbstractDao;
 import com.yundong.${dbNameT}dao${packageName}.I${nameFU}Dao;
@@ -38,7 +38,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
     @Override
   public int save${nameFU}(${nameFU} _${name}) {
     	StringBuilder strSql=new StringBuilder();
-    	strSql.append("insert into "+ConstUtil.database_name+".${dbName} (");
+    	strSql.append("insert into "+paymentUtil.database_name+".${dbName} (");
         <#list propertyList as p>
         strSql.append("${p.dbName}<#if p_has_next>,</#if>");
         </#list>
@@ -54,15 +54,19 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
 	@Override
   public ${nameFU} get${nameFU}ByID(<#list pkPropertyList as pk><#if pk_index!=0> and</#if>${pk.javaType}	_${pk.dbName}</#list>) {
     	StringBuilder strSql=new StringBuilder();
-    	strSql.append("select "+ConstUtil.database_name+".${dbName} ("); 
+    	strSql.append("select "); 
     	<#list propertyList as p>
     	strSql.append("${p.dbName}<#if p_has_next>,</#if>");
 	    </#list>	
-	    strSql.append(")  from "+ConstUtil.database_name+".${dbName}  ");
+	    strSql.append("  from "+paymentUtil.database_name+".${dbName}  ");
+	    strSql.append(" where ");
+	    <#list pkPropertyList as pk>
+		<#if pk_index!=0>strSql.append(" and ")</#if>
+		strSql.append("${pk.dbName}=${maoHao}${pk.dbName}");
+	</#list>
 	 MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		<#list pkPropertyList as pk>
-		<#if pk_index!=0> and</#if>
-        paramSource.addValue("${pk.dbName}",_${pk.dbName});
+		<#list pkPropertyList as pk>		
+		 paramSource.addValue("${pk.dbName}",_${pk.dbName});
 	</#list>
 	 List<${nameFU}> list = this.namedJdbcTemplate.query(strSql.toString(), paramSource, this.createRowMapper(${nameFU}.class));
        if (list.size() > 0) {
@@ -73,7 +77,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
   @Override
   public int update${nameFU}(${nameFU} _${name}) {
 	  StringBuilder strSql=new StringBuilder();
-  	 strSql.append("update "+ConstUtil.database_name+".${dbName}  set "); 
+  	 strSql.append("update "+paymentUtil.database_name+".${dbName}  set "); 
 		<#list propertyList as p>	
 		strSql.append("${p.dbName}=${maoHao}${p.name},");		
 		</#list>

@@ -57,7 +57,7 @@ public class ${nameFU}VO implements Serializable {
         return sb.toString();
     }
 
-    public boolean equals(Object obj) {
+   /* public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -68,7 +68,7 @@ public class ${nameFU}VO implements Serializable {
             }
         }
         return false;
-    }
+    }*/
 
     public int hashCode() {
         String pkStr = "" + <#list pkPropertyList as pk>this.get${pk.nameFU}()<#if pk_has_next> + </#if></#list>;
