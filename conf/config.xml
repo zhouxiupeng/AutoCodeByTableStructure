@@ -30,12 +30,12 @@
  -->
 
 <config  
-    dbname="payment."
+    dbname="m1_core."
 	isSubpackage="false"
 	isWriteToProject = "true"
 	isForceWriteToProject = "true"
 	tableFixs = "t_,v_"
-	marker_path="//iyd//"
+	marker_path="//core//"
     mainpath="/media/zxp/pro/runnerbar/orther/autoCode/"
 	controller = "$mainpath+controller/"
 	

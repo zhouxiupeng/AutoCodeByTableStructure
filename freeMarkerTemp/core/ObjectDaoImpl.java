@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 
-import com.yundong.payment.common.paymentUtil;
+import com.yundong.m1_core.common.BaseUtil;
 
 import com.yundong.api.dao.AbstractDao;
 import com.yundong.${dbNameT}dao${packageName}.I${nameFU}Dao;
@@ -38,7 +38,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
     @Override
   public int save${nameFU}(${nameFU} _${name}) {
     	StringBuilder strSql=new StringBuilder();
-    	strSql.append("insert into "+paymentUtil.database_name+".${dbName} (");
+    	strSql.append("insert into "+BaseUtil.database_name+".${dbName} (");
         <#list propertyList as p>
         strSql.append("${p.dbName}<#if p_has_next>,</#if>");
         </#list>
@@ -58,7 +58,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
     	<#list propertyList as p>
     	strSql.append("${p.dbName}<#if p_has_next>,</#if>");
 	    </#list>	
-	    strSql.append("  from "+paymentUtil.database_name+".${dbName}  ");
+	    strSql.append("  from "+BaseUtil.database_name+".${dbName}  ");
 	    strSql.append(" where ");
 	    <#list pkPropertyList as pk>
 		<#if pk_index!=0>strSql.append(" and ");</#if>
@@ -77,7 +77,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
   @Override
   public int update${nameFU}(${nameFU} _${name}) {
 	  StringBuilder strSql=new StringBuilder();
-  	 strSql.append("update "+paymentUtil.database_name+".${dbName}  set "); 
+  	 strSql.append("update "+BaseUtil.database_name+".${dbName}  set "); 
 		<#list propertyList as p>	
 		strSql.append("${p.dbName}=${maoHao}${p.name},");		
 		</#list>

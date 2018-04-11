@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 @author 代码自动生成 113857118@qq.com
-@date 2017-12
+@date 2018-04
  -->
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -26,11 +26,29 @@
 
 
 	
-	<!-- 调用服务:【账户信息】 -->
-	<dubbo:reference id="accountService" interface="com.bluemobi.service.AccountService" />
-	<!-- 调用服务:【账户余额表】 -->
-	<dubbo:reference id="balanceService" interface="com.bluemobi.service.BalanceService" />
-	<!-- 调用服务:【账号交易明细数据】 -->
-	<dubbo:reference id="balanceRecordService" interface="com.bluemobi.service.BalanceRecordService" />
+	<!-- 调用服务:【】 -->
+	<dubbo:reference id="mApplicationConversionService" interface="com.bluemobi.service.MApplicationConversionService" />
+	<!-- 调用服务:【管理团队每月的统计】 -->
+	<dubbo:reference id="mAssessmentRecordService" interface="com.bluemobi.service.MAssessmentRecordService" />
+	<!-- 调用服务:【分成明细记录表】 -->
+	<dubbo:reference id="mDividedRecordService" interface="com.bluemobi.service.MDividedRecordService" />
+	<!-- 调用服务:【分成汇总记录表】 -->
+	<dubbo:reference id="mDividedSummaryService" interface="com.bluemobi.service.MDividedSummaryService" />
+	<!-- 调用服务:【层级关系定义】 -->
+	<dubbo:reference id="mHierarchicalRelationshipService" interface="com.bluemobi.service.MHierarchicalRelationshipService" />
+	<!-- 调用服务:【】 -->
+	<dubbo:reference id="mTeamAssessmentRecordService" interface="com.bluemobi.service.MTeamAssessmentRecordService" />
+	<!-- 调用服务:【管理团队每天的统计】 -->
+	<dubbo:reference id="mTeamDailyReportsService" interface="com.bluemobi.service.MTeamDailyReportsService" />
+	<!-- 调用服务:【管理团队每月的统计】 -->
+	<dubbo:reference id="mTeamMonthlyReportsService" interface="com.bluemobi.service.MTeamMonthlyReportsService" />
+	<!-- 调用服务:【】 -->
+	<dubbo:reference id="mUserAssessmentRecordService" interface="com.bluemobi.service.MUserAssessmentRecordService" />
+	<!-- 调用服务:【用户每天基本统计】 -->
+	<dubbo:reference id="mUserDailyReportsService" interface="com.bluemobi.service.MUserDailyReportsService" />
+	<!-- 调用服务:【】 -->
+	<dubbo:reference id="mUserInfoService" interface="com.bluemobi.service.MUserInfoService" />
+	<!-- 调用服务:【用户每月基本统计】 -->
+	<dubbo:reference id="mUserMonthlyReportsService" interface="com.bluemobi.service.MUserMonthlyReportsService" />
 
 </beans>
