@@ -13,3 +13,10 @@ private void save${nameFU}ToDb(<#list propertyList as p>${p.javaType} _${p.dbNam
         }
  
    
+   private void save${nameFU}ToDb(<#list propertyList as p>${p.javaType} _${p.dbName}<#if p_has_next>,</#if></#list>){          
+        ${nameFU} _${name}VO= new ${nameFU}();
+        <#list propertyList as p>
+        _${name}VO.set${p.nameFU}(_${name}VO.get${p.nameFU}());
+        </#list>    
+        _${name}ServiceImpl.save${nameFU}(_${name});
+        }

@@ -33,30 +33,10 @@
 
 
 
-	<!-- 提供服务:【】 -->
-	<dubbo:service interface="com.bluemobi.service.MApplicationConversionService" ref="mApplicationConversionService" />
-	<!-- 提供服务:【管理团队每月的统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MAssessmentRecordService" ref="mAssessmentRecordService" />
-	<!-- 提供服务:【分成明细记录表】 -->
-	<dubbo:service interface="com.bluemobi.service.MDividedRecordService" ref="mDividedRecordService" />
-	<!-- 提供服务:【分成汇总记录表】 -->
-	<dubbo:service interface="com.bluemobi.service.MDividedSummaryService" ref="mDividedSummaryService" />
-	<!-- 提供服务:【层级关系定义】 -->
-	<dubbo:service interface="com.bluemobi.service.MHierarchicalRelationshipService" ref="mHierarchicalRelationshipService" />
-	<!-- 提供服务:【】 -->
-	<dubbo:service interface="com.bluemobi.service.MTeamAssessmentRecordService" ref="mTeamAssessmentRecordService" />
-	<!-- 提供服务:【管理团队每天的统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MTeamDailyReportsService" ref="mTeamDailyReportsService" />
-	<!-- 提供服务:【管理团队每月的统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MTeamMonthlyReportsService" ref="mTeamMonthlyReportsService" />
-	<!-- 提供服务:【】 -->
-	<dubbo:service interface="com.bluemobi.service.MUserAssessmentRecordService" ref="mUserAssessmentRecordService" />
-	<!-- 提供服务:【用户每天基本统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MUserDailyReportsService" ref="mUserDailyReportsService" />
-	<!-- 提供服务:【】 -->
-	<dubbo:service interface="com.bluemobi.service.MUserInfoService" ref="mUserInfoService" />
 	<!-- 提供服务:【用户每月基本统计】 -->
 	<dubbo:service interface="com.bluemobi.service.MUserMonthlyReportsService" ref="mUserMonthlyReportsService" />
+	<!-- 提供服务:【管理团队每月的统计】 -->
+	<dubbo:service interface="com.bluemobi.service.MTeamMonthlyReportsService" ref="mTeamMonthlyReportsService" />
 
 	
 </beans>

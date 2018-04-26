@@ -1,13 +1,6 @@
 /*** Eclipse Class Decompiler plugin, copyright (c) 2016 Chen Chao (cnfree2000@hotmail.com) ***/
 package com.code.db;
 
-import com.code.config.Config;
-import com.code.model.MyClass;
-import com.code.model.Property;
-import com.code.parser.JavaTypeResolverDefaultImpl;
-import com.code.parser.JdbcTypeNameTranslator;
-import com.code.util.DropDownListUtil;
-import com.code.util.StringUtil;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -16,6 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import com.code.config.Config;
+import com.code.model.MyClass;
+import com.code.model.Property;
+import com.code.parser.JavaTypeResolverDefaultImpl;
+import com.code.parser.JdbcTypeNameTranslator;
+import com.code.util.DropDownListUtil;
+import com.code.util.StringUtil;
 
 public class DBUtils
 {

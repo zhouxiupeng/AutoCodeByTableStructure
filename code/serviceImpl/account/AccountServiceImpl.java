@@ -17,7 +17,7 @@ import com.yundong.payment.entity.Account;
  * 【账户信息】 服务类 实现类
  * 
  * @author 代码自动生成 113857118@qq.com
- * @date 2017-12
+ * @date 2018-01
  * 
  */
 @Service
@@ -33,7 +33,7 @@ public class AccountServiceImpl  implements IAccountService {
     }
 
     @Override
-    public Account getAccountByID(Long	_account_id) {
+    public Account getAccountByID(long	_account_id) {
     	return this.accountDaoImpl.getAccountByID(_account_id);
     }
     @Override

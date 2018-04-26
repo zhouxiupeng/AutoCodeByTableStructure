@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 【账户信息】持久化对象 数据库表：account
  * 
  * @author 代码自动生成 113857118@qq.com 
- * @date 2017-12
+ * @date 2018-01
  * 
  */
 public class AccountVO implements Serializable {
@@ -16,55 +16,55 @@ public class AccountVO implements Serializable {
     public static final long serialVersionUID = 1L;
 
     // 账户ID
-    private Long accountId;
+    private long accountId;
     // 用户UID
-    private Long userId;
+    private long userId;
     // 账户类型  1:个人账户;2:企业账户;
-    private Short userType;
+    private int userType;
     // 用户状态: -1.删除 ,0.冻结. 1. 正常
-    private Short status;
+    private int status;
     // 创建时间，默认为0
     private Date createTime;
     // 
     private Date updateTime;
 
     /** 获取 账户ID */
-    public Long getAccountId() {
+    public long getAccountId() {
         return accountId;
     }
 
     /** 设置 账户ID */
-    public void setAccountId(Long accountId) {
+    public void setAccountId(long accountId) {
         this.accountId = accountId;
     }
 
     /** 获取 用户UID */
-    public Long getUserId() {
+    public long getUserId() {
         return userId;
     }
 
     /** 设置 用户UID */
-    public void setUserId(Long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
     /** 获取 账户类型  1:个人账户;2:企业账户; */
-    public Short getUserType() {
+    public int getUserType() {
         return userType;
     }
 
     /** 设置 账户类型  1:个人账户;2:企业账户; */
-    public void setUserType(Short userType) {
+    public void setUserType(int userType) {
         this.userType = userType;
     }
 
     /** 获取 用户状态: -1.删除 ,0.冻结. 1. 正常 */
-    public Short getStatus() {
+    public int getStatus() {
         return status;
     }
 
     /** 设置 用户状态: -1.删除 ,0.冻结. 1. 正常 */
-    public void setStatus(Short status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -102,7 +102,7 @@ public class AccountVO implements Serializable {
         return sb.toString();
     }
 
-    public boolean equals(Object obj) {
+   /* public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -113,7 +113,7 @@ public class AccountVO implements Serializable {
             }
         }
         return false;
-    }
+    }*/
 
     public int hashCode() {
         String pkStr = "" + this.getAccountId();

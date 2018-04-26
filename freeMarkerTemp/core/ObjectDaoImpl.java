@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 
-import com.yundong.m1_core.common.BaseUtil;
+import com.yundong.m1.core.common.BaseUtil;
 
 import com.yundong.api.dao.AbstractDao;
 import com.yundong.${dbNameT}dao${packageName}.I${nameFU}Dao;
