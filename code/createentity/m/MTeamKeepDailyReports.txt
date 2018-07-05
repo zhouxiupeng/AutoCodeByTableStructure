@@ -1,0 +1,42 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamKeepDailyReportsToDb(Long _muid,Date _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _one_training_education,Integer _two_training_education){	     	
+    	MTeamKeepDailyReports _mTeamKeepDailyReports= new MTeamKeepDailyReports();
+        _mTeamKeepDailyReports.setMuid(_muid);
+        _mTeamKeepDailyReports.setArchivingTime(_archiving_time);
+        _mTeamKeepDailyReports.setCreateTime(_create_time);
+        _mTeamKeepDailyReports.setUploadCount(_upload_count);
+        _mTeamKeepDailyReports.setDownloadCount(_download_count);
+        _mTeamKeepDailyReports.setThanksNumber(_thanks_number);
+        _mTeamKeepDailyReports.setThanksAmount(_thanks_amount);
+        _mTeamKeepDailyReports.setProfit(_profit);
+        _mTeamKeepDailyReports.setCultivationAmount(_cultivation_amount);
+        _mTeamKeepDailyReports.setCoachAmount(_coach_amount);
+        _mTeamKeepDailyReports.setResultsAmount(_results_amount);
+        _mTeamKeepDailyReports.setOneTrainingEducation(_one_training_education);
+        _mTeamKeepDailyReports.setTwoTrainingEducation(_two_training_education);
+        _mTeamKeepDailyReportsServiceImpl.saveMTeamKeepDailyReports(_mTeamKeepDailyReports);
+        }
+ 
+   
+   private void saveMTeamKeepDailyReportsToDb(Long _muid,Date _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _one_training_education,Integer _two_training_education){          
+        MTeamKeepDailyReports _mTeamKeepDailyReportsVO= new MTeamKeepDailyReports();
+        _mTeamKeepDailyReportsVO.setMuid(_mTeamKeepDailyReportsVO.getMuid());
+        _mTeamKeepDailyReportsVO.setArchivingTime(_mTeamKeepDailyReportsVO.getArchivingTime());
+        _mTeamKeepDailyReportsVO.setCreateTime(_mTeamKeepDailyReportsVO.getCreateTime());
+        _mTeamKeepDailyReportsVO.setUploadCount(_mTeamKeepDailyReportsVO.getUploadCount());
+        _mTeamKeepDailyReportsVO.setDownloadCount(_mTeamKeepDailyReportsVO.getDownloadCount());
+        _mTeamKeepDailyReportsVO.setThanksNumber(_mTeamKeepDailyReportsVO.getThanksNumber());
+        _mTeamKeepDailyReportsVO.setThanksAmount(_mTeamKeepDailyReportsVO.getThanksAmount());
+        _mTeamKeepDailyReportsVO.setProfit(_mTeamKeepDailyReportsVO.getProfit());
+        _mTeamKeepDailyReportsVO.setCultivationAmount(_mTeamKeepDailyReportsVO.getCultivationAmount());
+        _mTeamKeepDailyReportsVO.setCoachAmount(_mTeamKeepDailyReportsVO.getCoachAmount());
+        _mTeamKeepDailyReportsVO.setResultsAmount(_mTeamKeepDailyReportsVO.getResultsAmount());
+        _mTeamKeepDailyReportsVO.setOneTrainingEducation(_mTeamKeepDailyReportsVO.getOneTrainingEducation());
+        _mTeamKeepDailyReportsVO.setTwoTrainingEducation(_mTeamKeepDailyReportsVO.getTwoTrainingEducation());
+        _mTeamKeepDailyReportsServiceImpl.saveMTeamKeepDailyReports(_mTeamKeepDailyReports);
+        }

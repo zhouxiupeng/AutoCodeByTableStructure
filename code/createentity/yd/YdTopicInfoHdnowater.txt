@@ -1,0 +1,30 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdTopicInfoHdnowaterToDb(Long _topic_info_id,String _url_hd_nowater,Integer _hd_nowatersize,Integer _source,String _url_uhd_nowater,Integer _uhd_nowatersize,Date _create_time){	     	
+    	YdTopicInfoHdnowater _ydTopicInfoHdnowater= new YdTopicInfoHdnowater();
+        _ydTopicInfoHdnowater.setTopicInfoId(_topic_info_id);
+        _ydTopicInfoHdnowater.setUrlHdNowater(_url_hd_nowater);
+        _ydTopicInfoHdnowater.setHdNowatersize(_hd_nowatersize);
+        _ydTopicInfoHdnowater.setSource(_source);
+        _ydTopicInfoHdnowater.setUrlUhdNowater(_url_uhd_nowater);
+        _ydTopicInfoHdnowater.setUhdNowatersize(_uhd_nowatersize);
+        _ydTopicInfoHdnowater.setCreateTime(_create_time);
+        _ydTopicInfoHdnowaterServiceImpl.saveYdTopicInfoHdnowater(_ydTopicInfoHdnowater);
+        }
+ 
+   
+   private void saveYdTopicInfoHdnowaterToDb(Long _topic_info_id,String _url_hd_nowater,Integer _hd_nowatersize,Integer _source,String _url_uhd_nowater,Integer _uhd_nowatersize,Date _create_time){          
+        YdTopicInfoHdnowater _ydTopicInfoHdnowaterVO= new YdTopicInfoHdnowater();
+        _ydTopicInfoHdnowaterVO.setTopicInfoId(_ydTopicInfoHdnowaterVO.getTopicInfoId());
+        _ydTopicInfoHdnowaterVO.setUrlHdNowater(_ydTopicInfoHdnowaterVO.getUrlHdNowater());
+        _ydTopicInfoHdnowaterVO.setHdNowatersize(_ydTopicInfoHdnowaterVO.getHdNowatersize());
+        _ydTopicInfoHdnowaterVO.setSource(_ydTopicInfoHdnowaterVO.getSource());
+        _ydTopicInfoHdnowaterVO.setUrlUhdNowater(_ydTopicInfoHdnowaterVO.getUrlUhdNowater());
+        _ydTopicInfoHdnowaterVO.setUhdNowatersize(_ydTopicInfoHdnowaterVO.getUhdNowatersize());
+        _ydTopicInfoHdnowaterVO.setCreateTime(_ydTopicInfoHdnowaterVO.getCreateTime());
+        _ydTopicInfoHdnowaterServiceImpl.saveYdTopicInfoHdnowater(_ydTopicInfoHdnowater);
+        }

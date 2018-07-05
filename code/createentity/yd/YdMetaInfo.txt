@@ -1,0 +1,22 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdMetaInfoToDb(Long _id,String _meta_info,Date _create_time){	     	
+    	YdMetaInfo _ydMetaInfo= new YdMetaInfo();
+        _ydMetaInfo.setId(_id);
+        _ydMetaInfo.setMetaInfo(_meta_info);
+        _ydMetaInfo.setCreateTime(_create_time);
+        _ydMetaInfoServiceImpl.saveYdMetaInfo(_ydMetaInfo);
+        }
+ 
+   
+   private void saveYdMetaInfoToDb(Long _id,String _meta_info,Date _create_time){          
+        YdMetaInfo _ydMetaInfoVO= new YdMetaInfo();
+        _ydMetaInfoVO.setId(_ydMetaInfoVO.getId());
+        _ydMetaInfoVO.setMetaInfo(_ydMetaInfoVO.getMetaInfo());
+        _ydMetaInfoVO.setCreateTime(_ydMetaInfoVO.getCreateTime());
+        _ydMetaInfoServiceImpl.saveYdMetaInfo(_ydMetaInfo);
+        }

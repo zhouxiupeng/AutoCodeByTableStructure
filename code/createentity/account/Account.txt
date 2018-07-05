@@ -1,0 +1,17 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveAccountToDb(long _account_id,long _user_id,int _user_type,int _status,Date _create_time,Date _update_time){	     	
+    	Account _account= new Account();
+        _account.setAccountId(_account_id);
+        _account.setUserId(_user_id);
+        _account.setUserType(_user_type);
+        _account.setStatus(_status);
+        _account.setCreateTime(_create_time);
+        _account.setUpdateTime(_update_time);
+        _accountServiceImpl.saveAccount(_account);
+        }
+ 

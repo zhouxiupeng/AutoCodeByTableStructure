@@ -1,0 +1,25 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveOnlinePaymentToDb(Long _order_id,Long _uid,String _rece_account,Long _amount,String _evidence_id,String _trade_state,String _mer_date,Date _create_time,Date _update_time,String _ret_code,String _ret_msg,Integer _fee,Integer _fee_type,String _transfer_settle_date){	     	
+    	OnlinePayment _onlinePayment= new OnlinePayment();
+        _onlinePayment.setOrderId(_order_id);
+        _onlinePayment.setUid(_uid);
+        _onlinePayment.setReceAccount(_rece_account);
+        _onlinePayment.setAmount(_amount);
+        _onlinePayment.setEvidenceId(_evidence_id);
+        _onlinePayment.setTradeState(_trade_state);
+        _onlinePayment.setMerDate(_mer_date);
+        _onlinePayment.setCreateTime(_create_time);
+        _onlinePayment.setUpdateTime(_update_time);
+        _onlinePayment.setRetCode(_ret_code);
+        _onlinePayment.setRetMsg(_ret_msg);
+        _onlinePayment.setFee(_fee);
+        _onlinePayment.setFeeType(_fee_type);
+        _onlinePayment.setTransferSettleDate(_transfer_settle_date);
+        _onlinePaymentServiceImpl.saveOnlinePayment(_onlinePayment);
+        }
+ 

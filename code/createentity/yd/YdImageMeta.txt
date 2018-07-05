@@ -1,0 +1,60 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdImageMetaToDb(Long _id,Long _activity_id,Long _uid,String _url_no_watermark,Integer _no_watermark_size,String _md5,Integer _crc32,Double _gps_latitude,String _gps_latitude_ref,Double _gps_longitude,String _gps_longitude_ref,Integer _image_height,Integer _image_width,Integer _orientation,Integer _is_origin,String _url_hl_no_watermark,Integer _hq_size,Integer _service_domain_id,Integer _status,Date _create_time,Date _update_time,String _origin_filename){	     	
+    	YdImageMeta _ydImageMeta= new YdImageMeta();
+        _ydImageMeta.setId(_id);
+        _ydImageMeta.setActivityId(_activity_id);
+        _ydImageMeta.setUid(_uid);
+        _ydImageMeta.setUrlNoWatermark(_url_no_watermark);
+        _ydImageMeta.setNoWatermarkSize(_no_watermark_size);
+        _ydImageMeta.setMd5(_md5);
+        _ydImageMeta.setCrc32(_crc32);
+        _ydImageMeta.setGpsLatitude(_gps_latitude);
+        _ydImageMeta.setGpsLatitudeRef(_gps_latitude_ref);
+        _ydImageMeta.setGpsLongitude(_gps_longitude);
+        _ydImageMeta.setGpsLongitudeRef(_gps_longitude_ref);
+        _ydImageMeta.setImageHeight(_image_height);
+        _ydImageMeta.setImageWidth(_image_width);
+        _ydImageMeta.setOrientation(_orientation);
+        _ydImageMeta.setIsOrigin(_is_origin);
+        _ydImageMeta.setUrlHlNoWatermark(_url_hl_no_watermark);
+        _ydImageMeta.setHqSize(_hq_size);
+        _ydImageMeta.setServiceDomainId(_service_domain_id);
+        _ydImageMeta.setStatus(_status);
+        _ydImageMeta.setCreateTime(_create_time);
+        _ydImageMeta.setUpdateTime(_update_time);
+        _ydImageMeta.setOriginFilename(_origin_filename);
+        _ydImageMetaServiceImpl.saveYdImageMeta(_ydImageMeta);
+        }
+ 
+   
+   private void saveYdImageMetaToDb(Long _id,Long _activity_id,Long _uid,String _url_no_watermark,Integer _no_watermark_size,String _md5,Integer _crc32,Double _gps_latitude,String _gps_latitude_ref,Double _gps_longitude,String _gps_longitude_ref,Integer _image_height,Integer _image_width,Integer _orientation,Integer _is_origin,String _url_hl_no_watermark,Integer _hq_size,Integer _service_domain_id,Integer _status,Date _create_time,Date _update_time,String _origin_filename){          
+        YdImageMeta _ydImageMetaVO= new YdImageMeta();
+        _ydImageMetaVO.setId(_ydImageMetaVO.getId());
+        _ydImageMetaVO.setActivityId(_ydImageMetaVO.getActivityId());
+        _ydImageMetaVO.setUid(_ydImageMetaVO.getUid());
+        _ydImageMetaVO.setUrlNoWatermark(_ydImageMetaVO.getUrlNoWatermark());
+        _ydImageMetaVO.setNoWatermarkSize(_ydImageMetaVO.getNoWatermarkSize());
+        _ydImageMetaVO.setMd5(_ydImageMetaVO.getMd5());
+        _ydImageMetaVO.setCrc32(_ydImageMetaVO.getCrc32());
+        _ydImageMetaVO.setGpsLatitude(_ydImageMetaVO.getGpsLatitude());
+        _ydImageMetaVO.setGpsLatitudeRef(_ydImageMetaVO.getGpsLatitudeRef());
+        _ydImageMetaVO.setGpsLongitude(_ydImageMetaVO.getGpsLongitude());
+        _ydImageMetaVO.setGpsLongitudeRef(_ydImageMetaVO.getGpsLongitudeRef());
+        _ydImageMetaVO.setImageHeight(_ydImageMetaVO.getImageHeight());
+        _ydImageMetaVO.setImageWidth(_ydImageMetaVO.getImageWidth());
+        _ydImageMetaVO.setOrientation(_ydImageMetaVO.getOrientation());
+        _ydImageMetaVO.setIsOrigin(_ydImageMetaVO.getIsOrigin());
+        _ydImageMetaVO.setUrlHlNoWatermark(_ydImageMetaVO.getUrlHlNoWatermark());
+        _ydImageMetaVO.setHqSize(_ydImageMetaVO.getHqSize());
+        _ydImageMetaVO.setServiceDomainId(_ydImageMetaVO.getServiceDomainId());
+        _ydImageMetaVO.setStatus(_ydImageMetaVO.getStatus());
+        _ydImageMetaVO.setCreateTime(_ydImageMetaVO.getCreateTime());
+        _ydImageMetaVO.setUpdateTime(_ydImageMetaVO.getUpdateTime());
+        _ydImageMetaVO.setOriginFilename(_ydImageMetaVO.getOriginFilename());
+        _ydImageMetaServiceImpl.saveYdImageMeta(_ydImageMeta);
+        }

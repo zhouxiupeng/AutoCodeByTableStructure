@@ -1,0 +1,32 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMessageAllToDb(Integer _id,String _receiver_id,String _title,String _content,String _img_url,String _img_min_url,Integer _type,Integer _msg_type,String _sender_id,String _sender_name,Integer _status,Integer _isread,Integer _group,Integer _redirect_type,String _redirect_uri,String _summary,Date _createtime,Date _updatetime,Long _topic_info_id,Integer _message_type,Integer _is_comment){	     	
+    	MessageAll _messageAll= new MessageAll();
+        _messageAll.setId(_id);
+        _messageAll.setReceiverId(_receiver_id);
+        _messageAll.setTitle(_title);
+        _messageAll.setContent(_content);
+        _messageAll.setImgUrl(_img_url);
+        _messageAll.setImgMinUrl(_img_min_url);
+        _messageAll.setType(_type);
+        _messageAll.setMsgType(_msg_type);
+        _messageAll.setSenderId(_sender_id);
+        _messageAll.setSenderName(_sender_name);
+        _messageAll.setStatus(_status);
+        _messageAll.setIsread(_isread);
+        _messageAll.setGroup(_group);
+        _messageAll.setRedirectType(_redirect_type);
+        _messageAll.setRedirectUri(_redirect_uri);
+        _messageAll.setSummary(_summary);
+        _messageAll.setCreatetime(_createtime);
+        _messageAll.setUpdatetime(_updatetime);
+        _messageAll.setTopicInfoId(_topic_info_id);
+        _messageAll.setMessageType(_message_type);
+        _messageAll.setIsComment(_is_comment);
+        _messageAllServiceImpl.saveMessageAll(_messageAll);
+        }
+ 

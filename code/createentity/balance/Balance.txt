@@ -1,0 +1,24 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveBalanceToDb(long _balance_id,long _account_id,int _balance_type,long _amount,long _total_recharge_amount,long _total_consume_amount,int _status,int _attribute,String _currency,Date _create_time,Date _update_time,long _total_withdraw_amount,long _user_id){	     	
+    	Balance _balance= new Balance();
+        _balance.setBalanceId(_balance_id);
+        _balance.setAccountId(_account_id);
+        _balance.setBalanceType(_balance_type);
+        _balance.setAmount(_amount);
+        _balance.setTotalRechargeAmount(_total_recharge_amount);
+        _balance.setTotalConsumeAmount(_total_consume_amount);
+        _balance.setStatus(_status);
+        _balance.setAttribute(_attribute);
+        _balance.setCurrency(_currency);
+        _balance.setCreateTime(_create_time);
+        _balance.setUpdateTime(_update_time);
+        _balance.setTotalWithdrawAmount(_total_withdraw_amount);
+        _balance.setUserId(_user_id);
+        _balanceServiceImpl.saveBalance(_balance);
+        }
+ 

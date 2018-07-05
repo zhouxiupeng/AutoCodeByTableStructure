@@ -1,0 +1,16 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveOnlinePaymentQueryToDb(Long _order_id,String _mer_date,Date _nest_update_time,Date _create_time,Integer _query_times){	     	
+    	OnlinePaymentQuery _onlinePaymentQuery= new OnlinePaymentQuery();
+        _onlinePaymentQuery.setOrderId(_order_id);
+        _onlinePaymentQuery.setMerDate(_mer_date);
+        _onlinePaymentQuery.setNestUpdateTime(_nest_update_time);
+        _onlinePaymentQuery.setCreateTime(_create_time);
+        _onlinePaymentQuery.setQueryTimes(_query_times);
+        _onlinePaymentQueryServiceImpl.saveOnlinePaymentQuery(_onlinePaymentQuery);
+        }
+ 

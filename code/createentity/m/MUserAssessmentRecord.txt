@@ -1,0 +1,23 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMUserAssessmentRecordToDb(Long _muid,Long _uid,String _assess_time,Date _create_time,Integer _pre_level,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _test_results,Integer _status,Long _parameters_id){	     	
+    	MUserAssessmentRecord _mUserAssessmentRecord= new MUserAssessmentRecord();
+        _mUserAssessmentRecord.setMuid(_muid);
+        _mUserAssessmentRecord.setUid(_uid);
+        _mUserAssessmentRecord.setAssessTime(_assess_time);
+        _mUserAssessmentRecord.setCreateTime(_create_time);
+        _mUserAssessmentRecord.setPreLevel(_pre_level);
+        _mUserAssessmentRecord.setUploadCount(_upload_count);
+        _mUserAssessmentRecord.setDownloadCount(_download_count);
+        _mUserAssessmentRecord.setThanksNumber(_thanks_number);
+        _mUserAssessmentRecord.setThanksAmount(_thanks_amount);
+        _mUserAssessmentRecord.setTestResults(_test_results);
+        _mUserAssessmentRecord.setStatus(_status);
+        _mUserAssessmentRecord.setParametersId(_parameters_id);
+        _mUserAssessmentRecordServiceImpl.saveMUserAssessmentRecord(_mUserAssessmentRecord);
+        }
+ 

@@ -1,0 +1,29 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamAssessmentRecordToDb(Long _muid,Long _uid,String _assess_time,Date _create_time,Integer _pre_level,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _test_results,Integer _status,Integer _cultivation_amount,Integer _coach_amount,Integer _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Long _parameters_id){	     	
+    	MTeamAssessmentRecord _mTeamAssessmentRecord= new MTeamAssessmentRecord();
+        _mTeamAssessmentRecord.setMuid(_muid);
+        _mTeamAssessmentRecord.setUid(_uid);
+        _mTeamAssessmentRecord.setAssessTime(_assess_time);
+        _mTeamAssessmentRecord.setCreateTime(_create_time);
+        _mTeamAssessmentRecord.setPreLevel(_pre_level);
+        _mTeamAssessmentRecord.setUploadCount(_upload_count);
+        _mTeamAssessmentRecord.setDownloadCount(_download_count);
+        _mTeamAssessmentRecord.setThanksNumber(_thanks_number);
+        _mTeamAssessmentRecord.setThanksAmount(_thanks_amount);
+        _mTeamAssessmentRecord.setTestResults(_test_results);
+        _mTeamAssessmentRecord.setStatus(_status);
+        _mTeamAssessmentRecord.setCultivationAmount(_cultivation_amount);
+        _mTeamAssessmentRecord.setCoachAmount(_coach_amount);
+        _mTeamAssessmentRecord.setResultsAmount(_results_amount);
+        _mTeamAssessmentRecord.setActiveManpower(_active_manpower);
+        _mTeamAssessmentRecord.setOneTrainingEducation(_one_training_education);
+        _mTeamAssessmentRecord.setTwoTrainingEducation(_two_training_education);
+        _mTeamAssessmentRecord.setParametersId(_parameters_id);
+        _mTeamAssessmentRecordServiceImpl.saveMTeamAssessmentRecord(_mTeamAssessmentRecord);
+        }
+ 

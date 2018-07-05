@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- 
+	isSubpackage：
+	               模块是否分子包，如 dao.admin  dao.order dao.system，强烈建议设置为【true】，默认【true】
+	
+	tableFixs：
+	               表名前缀 生成代码时会忽略该前缀,支持多个
+	
+	isWriteToProject：
+	               是否生成一份代码到项目下面，建议设置为【true】。
+	               所有文件都可生成两份，一份到code目录下，另外一份可以生成到项目文件下。
+	               若isWriteToProject为false，代码不会生成到项目中；
+	               若isWriteToProject为true且项目中不存在此文件，则生成代码到项目中。
+	
+	po、mapper、dao、service、serviceImpl、controller、js、jsp、dubooProvider、dubooConsumer:
+	               各文件在项目中的路径
+	               若不希望将某个文件生成到项目中，不填写该属性，或者填空字符串即可
+	               当isWriteToProject 为false的时候，这些路径都会被忽略
+	               
+	tempJsp：
+	               生成静态的导航菜单，便于直接查看生成代码的功能，推荐设置为【""】
+	               也可以在地址栏输入   http://localhost:8000/nodo/[表名去下划线驼峰式名]/index 直接查看，如：http://localhost:8000/nodo/adminUser/index
+	               
+	marker_path:    模版路径，默认空，直接取freeMarkerTemp的路径,新的路径，是在默认路径的基础上增加
+	
+	dbname  :数据库的名称，程序模版变量dbname表示数据库表的名称，因此，模版变量中用dbNameT代表是数据库的名称
+	版本：2.0  
+	日期：2015.12.9
+ -->
+
+<config  
+    dbname="image.storage."
+	isSubpackage="false"
+	isWriteToProject = "true"
+	isForceWriteToProject = "true"
+	tableFixs = "t_,v_"
+	marker_path="//image//"
+    mainpath="/media/zxp/pro/runnerbar/orther/autoCode/"
+	controller = "$mainpath+controller/"
+	
+	jsp = "$mainpath+jsp/"
+	js = "$mainpath+js/"
+	dao = "$mainpath+dao/"
+	daoImpl="$mainpath+dao/impl/"
+	service = "$mainpath+service/"
+	serviceImpl ="$mainpath+service/impl/"
+	po = "$mainpath+vo/"
+	entity = "$mainpath+entity/"
+	createentity = "$mainpath+createentity/"
+	mapper = "$mainpath+mapper/"
+	dubooProvider = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
+	dubooConsumer = "/media/zxp/pro/runnerbar/orther/autoCode/spring/"
+	tempJsp = "$mainpath+tempJsp/"
+	>
+
+<!-- 
+
+	po = "C:\Users\Administrator\Workspaces\lilacInterface\src\com\bluemobi\po\" 
+	mapper = "C:\Users\Administrator\Workspaces\lilacServer\conf\mybatis\mapper\"
+	
+	dao = "C:\Users\Administrator\Workspaces\lilacServer\src\com\bluemobi\dao\"
+	service = "C:\Users\Administrator\Workspaces\lilacInterface\src\com\bluemobi\service\"
+	serviceImpl = "C:\Users\Administrator\Workspaces\lilacServer\src\com\bluemobi\serviceimpl\"
+
+
+	controller = "C:\Users\Administrator\Workspaces\lilac\src\com\bluemobi\controller\back\"
+	po = "D:\ACG\JAVA\acgInterface\src\com\bluemobi\po\" 
+	mapper = "D:\ACG\JAVA\acgServer\conf\mybatis\mapper\"
+	
+	dao = "D:\ACG\JAVA\acgServer\src\com\bluemobi\dao\"
+	service = "D:\ACG\JAVA\acgInterface\src\com\bluemobi\service\"
+	serviceImpl = "D:\ACG\JAVA\acgServer\src\com\bluemobi\serviceimpl\"
+
+	controller = "D:\ACG\JAVA\acg\src\com\bluemobi\controller\back\"
+	jsp = "D:\ACG\JAVA\acg\WebRoot\WEB-INF\view\back\"
+	js = "D:\ACG\JAVA\acg\WebRoot\resources\back\modules\"
+
+
+
+
+    tempJsp = "D:\ACG\JAVA\acg\WebRoot\WEB-INF\view\"
+    
+	dubooProvider = "D:\ACG\JAVA\acgServer\conf\spring\"
+    dubooConsumer = "D:\ACG\JAVA\acg\conf\spring\"    
+
+-->
+	
+</config>

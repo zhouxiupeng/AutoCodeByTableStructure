@@ -1,0 +1,22 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdWxOrderTopicToDb(Integer _wx_order_id,Integer _topic_info_id,Integer _is_origin,Double _price,Integer _is_refund,String _url_hq_origin,Integer _hq_size,String _url_no_watermark,Integer _no_watermark_size,Integer _is_share,Integer _is_print){	     	
+    	YdWxOrderTopic _ydWxOrderTopic= new YdWxOrderTopic();
+        _ydWxOrderTopic.setWxOrderId(_wx_order_id);
+        _ydWxOrderTopic.setTopicInfoId(_topic_info_id);
+        _ydWxOrderTopic.setIsOrigin(_is_origin);
+        _ydWxOrderTopic.setPrice(_price);
+        _ydWxOrderTopic.setIsRefund(_is_refund);
+        _ydWxOrderTopic.setUrlHqOrigin(_url_hq_origin);
+        _ydWxOrderTopic.setHqSize(_hq_size);
+        _ydWxOrderTopic.setUrlNoWatermark(_url_no_watermark);
+        _ydWxOrderTopic.setNoWatermarkSize(_no_watermark_size);
+        _ydWxOrderTopic.setIsShare(_is_share);
+        _ydWxOrderTopic.setIsPrint(_is_print);
+        _ydWxOrderTopicServiceImpl.saveYdWxOrderTopic(_ydWxOrderTopic);
+        }
+ 

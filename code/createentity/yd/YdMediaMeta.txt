@@ -1,0 +1,48 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdMediaMetaToDb(Long _id,Long _activity_id,Long _uid,String _title_pic,String _url,String _media_title,Integer _media_type,String _md5,Integer _crc32,Integer _service_domain_id,Integer _status,Date _create_time,Date _update_time,String _origin_filename,Integer _size,Integer _orientation){	     	
+    	YdMediaMeta _ydMediaMeta= new YdMediaMeta();
+        _ydMediaMeta.setId(_id);
+        _ydMediaMeta.setActivityId(_activity_id);
+        _ydMediaMeta.setUid(_uid);
+        _ydMediaMeta.setTitlePic(_title_pic);
+        _ydMediaMeta.setUrl(_url);
+        _ydMediaMeta.setMediaTitle(_media_title);
+        _ydMediaMeta.setMediaType(_media_type);
+        _ydMediaMeta.setMd5(_md5);
+        _ydMediaMeta.setCrc32(_crc32);
+        _ydMediaMeta.setServiceDomainId(_service_domain_id);
+        _ydMediaMeta.setStatus(_status);
+        _ydMediaMeta.setCreateTime(_create_time);
+        _ydMediaMeta.setUpdateTime(_update_time);
+        _ydMediaMeta.setOriginFilename(_origin_filename);
+        _ydMediaMeta.setSize(_size);
+        _ydMediaMeta.setOrientation(_orientation);
+        _ydMediaMetaServiceImpl.saveYdMediaMeta(_ydMediaMeta);
+        }
+ 
+   
+   private void saveYdMediaMetaToDb(Long _id,Long _activity_id,Long _uid,String _title_pic,String _url,String _media_title,Integer _media_type,String _md5,Integer _crc32,Integer _service_domain_id,Integer _status,Date _create_time,Date _update_time,String _origin_filename,Integer _size,Integer _orientation){          
+        YdMediaMeta _ydMediaMetaVO= new YdMediaMeta();
+        _ydMediaMetaVO.setId(_ydMediaMetaVO.getId());
+        _ydMediaMetaVO.setActivityId(_ydMediaMetaVO.getActivityId());
+        _ydMediaMetaVO.setUid(_ydMediaMetaVO.getUid());
+        _ydMediaMetaVO.setTitlePic(_ydMediaMetaVO.getTitlePic());
+        _ydMediaMetaVO.setUrl(_ydMediaMetaVO.getUrl());
+        _ydMediaMetaVO.setMediaTitle(_ydMediaMetaVO.getMediaTitle());
+        _ydMediaMetaVO.setMediaType(_ydMediaMetaVO.getMediaType());
+        _ydMediaMetaVO.setMd5(_ydMediaMetaVO.getMd5());
+        _ydMediaMetaVO.setCrc32(_ydMediaMetaVO.getCrc32());
+        _ydMediaMetaVO.setServiceDomainId(_ydMediaMetaVO.getServiceDomainId());
+        _ydMediaMetaVO.setStatus(_ydMediaMetaVO.getStatus());
+        _ydMediaMetaVO.setCreateTime(_ydMediaMetaVO.getCreateTime());
+        _ydMediaMetaVO.setUpdateTime(_ydMediaMetaVO.getUpdateTime());
+        _ydMediaMetaVO.setOriginFilename(_ydMediaMetaVO.getOriginFilename());
+        _ydMediaMetaVO.setSize(_ydMediaMetaVO.getSize());
+        _ydMediaMetaVO.setOrientation(_ydMediaMetaVO.getOrientation());
+        _ydMediaMetaServiceImpl.saveYdMediaMeta(_ydMediaMeta);
+        }

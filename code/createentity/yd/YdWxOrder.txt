@@ -1,0 +1,50 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdWxOrderToDb(Integer _id,Integer _uid,String _out_trade_no,Integer _topic_info_id,Integer _total_fee,String _body,Date _create_time,Integer _way,Integer _state,String _transaction_id,Date _transaction_time,Integer _order_type,Integer _refund_state,Double _refoud_fee,Date _client_pay_time,String _client_trade_state,Integer _client_pay_state){	     	
+    	YdWxOrder _ydWxOrder= new YdWxOrder();
+        _ydWxOrder.setId(_id);
+        _ydWxOrder.setUid(_uid);
+        _ydWxOrder.setOutTradeNo(_out_trade_no);
+        _ydWxOrder.setTopicInfoId(_topic_info_id);
+        _ydWxOrder.setTotalFee(_total_fee);
+        _ydWxOrder.setBody(_body);
+        _ydWxOrder.setCreateTime(_create_time);
+        _ydWxOrder.setWay(_way);
+        _ydWxOrder.setState(_state);
+        _ydWxOrder.setTransactionId(_transaction_id);
+        _ydWxOrder.setTransactionTime(_transaction_time);
+        _ydWxOrder.setOrderType(_order_type);
+        _ydWxOrder.setRefundState(_refund_state);
+        _ydWxOrder.setRefoudFee(_refoud_fee);
+        _ydWxOrder.setClientPayTime(_client_pay_time);
+        _ydWxOrder.setClientTradeState(_client_trade_state);
+        _ydWxOrder.setClientPayState(_client_pay_state);
+        _ydWxOrderServiceImpl.saveYdWxOrder(_ydWxOrder);
+        }
+ 
+   
+   private void saveYdWxOrderToDb(Integer _id,Integer _uid,String _out_trade_no,Integer _topic_info_id,Integer _total_fee,String _body,Date _create_time,Integer _way,Integer _state,String _transaction_id,Date _transaction_time,Integer _order_type,Integer _refund_state,Double _refoud_fee,Date _client_pay_time,String _client_trade_state,Integer _client_pay_state){          
+        YdWxOrder _ydWxOrderVO= new YdWxOrder();
+        _ydWxOrderVO.setId(_ydWxOrderVO.getId());
+        _ydWxOrderVO.setUid(_ydWxOrderVO.getUid());
+        _ydWxOrderVO.setOutTradeNo(_ydWxOrderVO.getOutTradeNo());
+        _ydWxOrderVO.setTopicInfoId(_ydWxOrderVO.getTopicInfoId());
+        _ydWxOrderVO.setTotalFee(_ydWxOrderVO.getTotalFee());
+        _ydWxOrderVO.setBody(_ydWxOrderVO.getBody());
+        _ydWxOrderVO.setCreateTime(_ydWxOrderVO.getCreateTime());
+        _ydWxOrderVO.setWay(_ydWxOrderVO.getWay());
+        _ydWxOrderVO.setState(_ydWxOrderVO.getState());
+        _ydWxOrderVO.setTransactionId(_ydWxOrderVO.getTransactionId());
+        _ydWxOrderVO.setTransactionTime(_ydWxOrderVO.getTransactionTime());
+        _ydWxOrderVO.setOrderType(_ydWxOrderVO.getOrderType());
+        _ydWxOrderVO.setRefundState(_ydWxOrderVO.getRefundState());
+        _ydWxOrderVO.setRefoudFee(_ydWxOrderVO.getRefoudFee());
+        _ydWxOrderVO.setClientPayTime(_ydWxOrderVO.getClientPayTime());
+        _ydWxOrderVO.setClientTradeState(_ydWxOrderVO.getClientTradeState());
+        _ydWxOrderVO.setClientPayState(_ydWxOrderVO.getClientPayState());
+        _ydWxOrderServiceImpl.saveYdWxOrder(_ydWxOrder);
+        }

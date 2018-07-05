@@ -1,0 +1,92 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdPhotoGrapherToDb(Long _id,Integer _status,Date _create_time,String _tel,String _portrait,Integer _city_id,String _city,String _real_name,Date _birthday,String _weixin,String _qq,String _camera,String _camera_other,String _lens_1,String _lens_2,String _lens_other,Date _use_aps,Integer _fulltime,Integer _sport,Long _uid,Integer _gender,String _nick_name,String _id_card,Integer _grapher_level,Integer _grapher_credits,Date _join_iyd_time,Integer _devel_channel,Integer _graph_manager,String _bank_card,String _alipay,String _other,Date _transit_time,String _bank_card_place,String _storage,Long _puid,Integer _is_profession,Integer _nick_name_change_count,String _identity_image_url){	     	
+    	YdPhotoGrapher _ydPhotoGrapher= new YdPhotoGrapher();
+        _ydPhotoGrapher.setId(_id);
+        _ydPhotoGrapher.setStatus(_status);
+        _ydPhotoGrapher.setCreateTime(_create_time);
+        _ydPhotoGrapher.setTel(_tel);
+        _ydPhotoGrapher.setPortrait(_portrait);
+        _ydPhotoGrapher.setCityId(_city_id);
+        _ydPhotoGrapher.setCity(_city);
+        _ydPhotoGrapher.setRealName(_real_name);
+        _ydPhotoGrapher.setBirthday(_birthday);
+        _ydPhotoGrapher.setWeixin(_weixin);
+        _ydPhotoGrapher.setQq(_qq);
+        _ydPhotoGrapher.setCamera(_camera);
+        _ydPhotoGrapher.setCameraOther(_camera_other);
+        _ydPhotoGrapher.setLens1(_lens_1);
+        _ydPhotoGrapher.setLens2(_lens_2);
+        _ydPhotoGrapher.setLensOther(_lens_other);
+        _ydPhotoGrapher.setUseAps(_use_aps);
+        _ydPhotoGrapher.setFulltime(_fulltime);
+        _ydPhotoGrapher.setSport(_sport);
+        _ydPhotoGrapher.setUid(_uid);
+        _ydPhotoGrapher.setGender(_gender);
+        _ydPhotoGrapher.setNickName(_nick_name);
+        _ydPhotoGrapher.setIdCard(_id_card);
+        _ydPhotoGrapher.setGrapherLevel(_grapher_level);
+        _ydPhotoGrapher.setGrapherCredits(_grapher_credits);
+        _ydPhotoGrapher.setJoinIydTime(_join_iyd_time);
+        _ydPhotoGrapher.setDevelChannel(_devel_channel);
+        _ydPhotoGrapher.setGraphManager(_graph_manager);
+        _ydPhotoGrapher.setBankCard(_bank_card);
+        _ydPhotoGrapher.setAlipay(_alipay);
+        _ydPhotoGrapher.setOther(_other);
+        _ydPhotoGrapher.setTransitTime(_transit_time);
+        _ydPhotoGrapher.setBankCardPlace(_bank_card_place);
+        _ydPhotoGrapher.setStorage(_storage);
+        _ydPhotoGrapher.setPuid(_puid);
+        _ydPhotoGrapher.setIsProfession(_is_profession);
+        _ydPhotoGrapher.setNickNameChangeCount(_nick_name_change_count);
+        _ydPhotoGrapher.setIdentityImageUrl(_identity_image_url);
+        _ydPhotoGrapherServiceImpl.saveYdPhotoGrapher(_ydPhotoGrapher);
+        }
+ 
+   
+   private void saveYdPhotoGrapherToDb(Long _id,Integer _status,Date _create_time,String _tel,String _portrait,Integer _city_id,String _city,String _real_name,Date _birthday,String _weixin,String _qq,String _camera,String _camera_other,String _lens_1,String _lens_2,String _lens_other,Date _use_aps,Integer _fulltime,Integer _sport,Long _uid,Integer _gender,String _nick_name,String _id_card,Integer _grapher_level,Integer _grapher_credits,Date _join_iyd_time,Integer _devel_channel,Integer _graph_manager,String _bank_card,String _alipay,String _other,Date _transit_time,String _bank_card_place,String _storage,Long _puid,Integer _is_profession,Integer _nick_name_change_count,String _identity_image_url){          
+        YdPhotoGrapher _ydPhotoGrapherVO= new YdPhotoGrapher();
+        _ydPhotoGrapherVO.setId(_ydPhotoGrapherVO.getId());
+        _ydPhotoGrapherVO.setStatus(_ydPhotoGrapherVO.getStatus());
+        _ydPhotoGrapherVO.setCreateTime(_ydPhotoGrapherVO.getCreateTime());
+        _ydPhotoGrapherVO.setTel(_ydPhotoGrapherVO.getTel());
+        _ydPhotoGrapherVO.setPortrait(_ydPhotoGrapherVO.getPortrait());
+        _ydPhotoGrapherVO.setCityId(_ydPhotoGrapherVO.getCityId());
+        _ydPhotoGrapherVO.setCity(_ydPhotoGrapherVO.getCity());
+        _ydPhotoGrapherVO.setRealName(_ydPhotoGrapherVO.getRealName());
+        _ydPhotoGrapherVO.setBirthday(_ydPhotoGrapherVO.getBirthday());
+        _ydPhotoGrapherVO.setWeixin(_ydPhotoGrapherVO.getWeixin());
+        _ydPhotoGrapherVO.setQq(_ydPhotoGrapherVO.getQq());
+        _ydPhotoGrapherVO.setCamera(_ydPhotoGrapherVO.getCamera());
+        _ydPhotoGrapherVO.setCameraOther(_ydPhotoGrapherVO.getCameraOther());
+        _ydPhotoGrapherVO.setLens1(_ydPhotoGrapherVO.getLens1());
+        _ydPhotoGrapherVO.setLens2(_ydPhotoGrapherVO.getLens2());
+        _ydPhotoGrapherVO.setLensOther(_ydPhotoGrapherVO.getLensOther());
+        _ydPhotoGrapherVO.setUseAps(_ydPhotoGrapherVO.getUseAps());
+        _ydPhotoGrapherVO.setFulltime(_ydPhotoGrapherVO.getFulltime());
+        _ydPhotoGrapherVO.setSport(_ydPhotoGrapherVO.getSport());
+        _ydPhotoGrapherVO.setUid(_ydPhotoGrapherVO.getUid());
+        _ydPhotoGrapherVO.setGender(_ydPhotoGrapherVO.getGender());
+        _ydPhotoGrapherVO.setNickName(_ydPhotoGrapherVO.getNickName());
+        _ydPhotoGrapherVO.setIdCard(_ydPhotoGrapherVO.getIdCard());
+        _ydPhotoGrapherVO.setGrapherLevel(_ydPhotoGrapherVO.getGrapherLevel());
+        _ydPhotoGrapherVO.setGrapherCredits(_ydPhotoGrapherVO.getGrapherCredits());
+        _ydPhotoGrapherVO.setJoinIydTime(_ydPhotoGrapherVO.getJoinIydTime());
+        _ydPhotoGrapherVO.setDevelChannel(_ydPhotoGrapherVO.getDevelChannel());
+        _ydPhotoGrapherVO.setGraphManager(_ydPhotoGrapherVO.getGraphManager());
+        _ydPhotoGrapherVO.setBankCard(_ydPhotoGrapherVO.getBankCard());
+        _ydPhotoGrapherVO.setAlipay(_ydPhotoGrapherVO.getAlipay());
+        _ydPhotoGrapherVO.setOther(_ydPhotoGrapherVO.getOther());
+        _ydPhotoGrapherVO.setTransitTime(_ydPhotoGrapherVO.getTransitTime());
+        _ydPhotoGrapherVO.setBankCardPlace(_ydPhotoGrapherVO.getBankCardPlace());
+        _ydPhotoGrapherVO.setStorage(_ydPhotoGrapherVO.getStorage());
+        _ydPhotoGrapherVO.setPuid(_ydPhotoGrapherVO.getPuid());
+        _ydPhotoGrapherVO.setIsProfession(_ydPhotoGrapherVO.getIsProfession());
+        _ydPhotoGrapherVO.setNickNameChangeCount(_ydPhotoGrapherVO.getNickNameChangeCount());
+        _ydPhotoGrapherVO.setIdentityImageUrl(_ydPhotoGrapherVO.getIdentityImageUrl());
+        _ydPhotoGrapherServiceImpl.saveYdPhotoGrapher(_ydPhotoGrapher);
+        }

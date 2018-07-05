@@ -1,0 +1,32 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdFaceInfoToDb(Long _id,Integer _face_id,Integer _face_coord_left,Integer _face_coord_top,Integer _face_coord_right,Integer _face_coord_bottom,String _face_encodes,Date _create_time){	     	
+    	YdFaceInfo _ydFaceInfo= new YdFaceInfo();
+        _ydFaceInfo.setId(_id);
+        _ydFaceInfo.setFaceId(_face_id);
+        _ydFaceInfo.setFaceCoordLeft(_face_coord_left);
+        _ydFaceInfo.setFaceCoordTop(_face_coord_top);
+        _ydFaceInfo.setFaceCoordRight(_face_coord_right);
+        _ydFaceInfo.setFaceCoordBottom(_face_coord_bottom);
+        _ydFaceInfo.setFaceEncodes(_face_encodes);
+        _ydFaceInfo.setCreateTime(_create_time);
+        _ydFaceInfoServiceImpl.saveYdFaceInfo(_ydFaceInfo);
+        }
+ 
+   
+   private void saveYdFaceInfoToDb(Long _id,Integer _face_id,Integer _face_coord_left,Integer _face_coord_top,Integer _face_coord_right,Integer _face_coord_bottom,String _face_encodes,Date _create_time){          
+        YdFaceInfo _ydFaceInfoVO= new YdFaceInfo();
+        _ydFaceInfoVO.setId(_ydFaceInfoVO.getId());
+        _ydFaceInfoVO.setFaceId(_ydFaceInfoVO.getFaceId());
+        _ydFaceInfoVO.setFaceCoordLeft(_ydFaceInfoVO.getFaceCoordLeft());
+        _ydFaceInfoVO.setFaceCoordTop(_ydFaceInfoVO.getFaceCoordTop());
+        _ydFaceInfoVO.setFaceCoordRight(_ydFaceInfoVO.getFaceCoordRight());
+        _ydFaceInfoVO.setFaceCoordBottom(_ydFaceInfoVO.getFaceCoordBottom());
+        _ydFaceInfoVO.setFaceEncodes(_ydFaceInfoVO.getFaceEncodes());
+        _ydFaceInfoVO.setCreateTime(_ydFaceInfoVO.getCreateTime());
+        _ydFaceInfoServiceImpl.saveYdFaceInfo(_ydFaceInfo);
+        }

@@ -1,0 +1,46 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamUpgradeMonthlyReportsToDb(Long _muid,String _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit_all,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,String _assess_start_end_time){	     	
+    	MTeamUpgradeMonthlyReports _mTeamUpgradeMonthlyReports= new MTeamUpgradeMonthlyReports();
+        _mTeamUpgradeMonthlyReports.setMuid(_muid);
+        _mTeamUpgradeMonthlyReports.setArchivingTime(_archiving_time);
+        _mTeamUpgradeMonthlyReports.setCreateTime(_create_time);
+        _mTeamUpgradeMonthlyReports.setUploadCount(_upload_count);
+        _mTeamUpgradeMonthlyReports.setDownloadCount(_download_count);
+        _mTeamUpgradeMonthlyReports.setThanksNumber(_thanks_number);
+        _mTeamUpgradeMonthlyReports.setThanksAmount(_thanks_amount);
+        _mTeamUpgradeMonthlyReports.setProfitAll(_profit_all);
+        _mTeamUpgradeMonthlyReports.setCultivationAmount(_cultivation_amount);
+        _mTeamUpgradeMonthlyReports.setCoachAmount(_coach_amount);
+        _mTeamUpgradeMonthlyReports.setResultsAmount(_results_amount);
+        _mTeamUpgradeMonthlyReports.setActiveManpower(_active_manpower);
+        _mTeamUpgradeMonthlyReports.setOneTrainingEducation(_one_training_education);
+        _mTeamUpgradeMonthlyReports.setTwoTrainingEducation(_two_training_education);
+        _mTeamUpgradeMonthlyReports.setAssessStartEndTime(_assess_start_end_time);
+        _mTeamUpgradeMonthlyReportsServiceImpl.saveMTeamUpgradeMonthlyReports(_mTeamUpgradeMonthlyReports);
+        }
+ 
+   
+   private void saveMTeamUpgradeMonthlyReportsToDb(Long _muid,String _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit_all,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,String _assess_start_end_time){          
+        MTeamUpgradeMonthlyReports _mTeamUpgradeMonthlyReportsVO= new MTeamUpgradeMonthlyReports();
+        _mTeamUpgradeMonthlyReportsVO.setMuid(_mTeamUpgradeMonthlyReportsVO.getMuid());
+        _mTeamUpgradeMonthlyReportsVO.setArchivingTime(_mTeamUpgradeMonthlyReportsVO.getArchivingTime());
+        _mTeamUpgradeMonthlyReportsVO.setCreateTime(_mTeamUpgradeMonthlyReportsVO.getCreateTime());
+        _mTeamUpgradeMonthlyReportsVO.setUploadCount(_mTeamUpgradeMonthlyReportsVO.getUploadCount());
+        _mTeamUpgradeMonthlyReportsVO.setDownloadCount(_mTeamUpgradeMonthlyReportsVO.getDownloadCount());
+        _mTeamUpgradeMonthlyReportsVO.setThanksNumber(_mTeamUpgradeMonthlyReportsVO.getThanksNumber());
+        _mTeamUpgradeMonthlyReportsVO.setThanksAmount(_mTeamUpgradeMonthlyReportsVO.getThanksAmount());
+        _mTeamUpgradeMonthlyReportsVO.setProfitAll(_mTeamUpgradeMonthlyReportsVO.getProfitAll());
+        _mTeamUpgradeMonthlyReportsVO.setCultivationAmount(_mTeamUpgradeMonthlyReportsVO.getCultivationAmount());
+        _mTeamUpgradeMonthlyReportsVO.setCoachAmount(_mTeamUpgradeMonthlyReportsVO.getCoachAmount());
+        _mTeamUpgradeMonthlyReportsVO.setResultsAmount(_mTeamUpgradeMonthlyReportsVO.getResultsAmount());
+        _mTeamUpgradeMonthlyReportsVO.setActiveManpower(_mTeamUpgradeMonthlyReportsVO.getActiveManpower());
+        _mTeamUpgradeMonthlyReportsVO.setOneTrainingEducation(_mTeamUpgradeMonthlyReportsVO.getOneTrainingEducation());
+        _mTeamUpgradeMonthlyReportsVO.setTwoTrainingEducation(_mTeamUpgradeMonthlyReportsVO.getTwoTrainingEducation());
+        _mTeamUpgradeMonthlyReportsVO.setAssessStartEndTime(_mTeamUpgradeMonthlyReportsVO.getAssessStartEndTime());
+        _mTeamUpgradeMonthlyReportsServiceImpl.saveMTeamUpgradeMonthlyReports(_mTeamUpgradeMonthlyReports);
+        }

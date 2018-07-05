@@ -1,0 +1,23 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveBalanceRecordToDb(long _balance_record_id,Date _create_time,long _account_id,long _relate_account,int _type,long _money,String _comment,long _operator_id,long _evidence_id,long _old_amount,long _new_amount,long _balance_id){	     	
+    	BalanceRecord _balanceRecord= new BalanceRecord();
+        _balanceRecord.setBalanceRecordId(_balance_record_id);
+        _balanceRecord.setCreateTime(_create_time);
+        _balanceRecord.setAccountId(_account_id);
+        _balanceRecord.setRelateAccount(_relate_account);
+        _balanceRecord.setType(_type);
+        _balanceRecord.setMoney(_money);
+        _balanceRecord.setComment(_comment);
+        _balanceRecord.setOperatorId(_operator_id);
+        _balanceRecord.setEvidenceId(_evidence_id);
+        _balanceRecord.setOldAmount(_old_amount);
+        _balanceRecord.setNewAmount(_new_amount);
+        _balanceRecord.setBalanceId(_balance_id);
+        _balanceRecordServiceImpl.saveBalanceRecord(_balanceRecord);
+        }
+ 

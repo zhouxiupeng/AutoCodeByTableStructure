@@ -1,0 +1,25 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMDividedRecordToDb(Long _id,String _evidence_id,Long _producer_muid,Long _producer_uid,Long _divided_muid,Long _divided_uid,Date _create_time,Integer _share_amount,Integer _share_type,Integer _profit,Date _order_create_time,Integer _proportions,Long _buyer_uid,Integer _payment){	     	
+    	MDividedRecord _mDividedRecord= new MDividedRecord();
+        _mDividedRecord.setId(_id);
+        _mDividedRecord.setEvidenceId(_evidence_id);
+        _mDividedRecord.setProducerMuid(_producer_muid);
+        _mDividedRecord.setProducerUid(_producer_uid);
+        _mDividedRecord.setDividedMuid(_divided_muid);
+        _mDividedRecord.setDividedUid(_divided_uid);
+        _mDividedRecord.setCreateTime(_create_time);
+        _mDividedRecord.setShareAmount(_share_amount);
+        _mDividedRecord.setShareType(_share_type);
+        _mDividedRecord.setProfit(_profit);
+        _mDividedRecord.setOrderCreateTime(_order_create_time);
+        _mDividedRecord.setProportions(_proportions);
+        _mDividedRecord.setBuyerUid(_buyer_uid);
+        _mDividedRecord.setPayment(_payment);
+        _mDividedRecordServiceImpl.saveMDividedRecord(_mDividedRecord);
+        }
+ 

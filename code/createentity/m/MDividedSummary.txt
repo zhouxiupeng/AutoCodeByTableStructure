@@ -1,0 +1,20 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMDividedSummaryToDb(Long _id,Long _divided_muid,Long _divided_uid,Date _archiving_time,Long _all_share_amount,Long _all_cultivation_amount,Long _all_coach_amount,Long _all_results_amount,Date _create_time){	     	
+    	MDividedSummary _mDividedSummary= new MDividedSummary();
+        _mDividedSummary.setId(_id);
+        _mDividedSummary.setDividedMuid(_divided_muid);
+        _mDividedSummary.setDividedUid(_divided_uid);
+        _mDividedSummary.setArchivingTime(_archiving_time);
+        _mDividedSummary.setAllShareAmount(_all_share_amount);
+        _mDividedSummary.setAllCultivationAmount(_all_cultivation_amount);
+        _mDividedSummary.setAllCoachAmount(_all_coach_amount);
+        _mDividedSummary.setAllResultsAmount(_all_results_amount);
+        _mDividedSummary.setCreateTime(_create_time);
+        _mDividedSummaryServiceImpl.saveMDividedSummary(_mDividedSummary);
+        }
+ 

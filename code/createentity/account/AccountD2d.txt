@@ -1,0 +1,29 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveAccountD2dToDb(Integer _id,Date _create_time,Integer _uid,Integer _fuid,Integer _type,Integer _money,Integer _status,String _comment,String _id_card,String _name,String _bank,Date _operation_time,Integer _yd_admin_uid,Integer _charge_against,Integer _yd_wx_order_id,Integer _activity_id,Integer _topic_info_id,Integer _is_check){	     	
+    	AccountD2d _accountD2d= new AccountD2d();
+        _accountD2d.setId(_id);
+        _accountD2d.setCreateTime(_create_time);
+        _accountD2d.setUid(_uid);
+        _accountD2d.setFuid(_fuid);
+        _accountD2d.setType(_type);
+        _accountD2d.setMoney(_money);
+        _accountD2d.setStatus(_status);
+        _accountD2d.setComment(_comment);
+        _accountD2d.setIdCard(_id_card);
+        _accountD2d.setName(_name);
+        _accountD2d.setBank(_bank);
+        _accountD2d.setOperationTime(_operation_time);
+        _accountD2d.setYdAdminUid(_yd_admin_uid);
+        _accountD2d.setChargeAgainst(_charge_against);
+        _accountD2d.setYdWxOrderId(_yd_wx_order_id);
+        _accountD2d.setActivityId(_activity_id);
+        _accountD2d.setTopicInfoId(_topic_info_id);
+        _accountD2d.setIsCheck(_is_check);
+        _accountD2dServiceImpl.saveAccountD2d(_accountD2d);
+        }
+ 

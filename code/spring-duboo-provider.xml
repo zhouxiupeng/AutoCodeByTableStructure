@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 @author 代码自动生成 113857118@qq.com
-@date 2018-04
+@date 2018-07
  -->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -33,10 +33,8 @@
 
 
 
-	<!-- 提供服务:【用户每月基本统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MUserMonthlyReportsService" ref="mUserMonthlyReportsService" />
-	<!-- 提供服务:【管理团队每月的统计】 -->
-	<dubbo:service interface="com.bluemobi.service.MTeamMonthlyReportsService" ref="mTeamMonthlyReportsService" />
+	<!-- 提供服务:【其它媒体信息表】 -->
+	<dubbo:service interface="com.bluemobi.service.YdMediaMetaService" ref="ydMediaMetaService" />
 
 	
 </beans>

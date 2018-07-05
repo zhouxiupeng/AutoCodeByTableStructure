@@ -1,0 +1,42 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdTopicToDb(Long _id,String _title,String _subtitle,String _portal_pic,String _header_title,String _detail,String _poster,String _font_color,Integer _creater,Long _activity_id,Integer _status,Date _create_time,Date _update_time){	     	
+    	YdTopic _ydTopic= new YdTopic();
+        _ydTopic.setId(_id);
+        _ydTopic.setTitle(_title);
+        _ydTopic.setSubtitle(_subtitle);
+        _ydTopic.setPortalPic(_portal_pic);
+        _ydTopic.setHeaderTitle(_header_title);
+        _ydTopic.setDetail(_detail);
+        _ydTopic.setPoster(_poster);
+        _ydTopic.setFontColor(_font_color);
+        _ydTopic.setCreater(_creater);
+        _ydTopic.setActivityId(_activity_id);
+        _ydTopic.setStatus(_status);
+        _ydTopic.setCreateTime(_create_time);
+        _ydTopic.setUpdateTime(_update_time);
+        _ydTopicServiceImpl.saveYdTopic(_ydTopic);
+        }
+ 
+   
+   private void saveYdTopicToDb(Long _id,String _title,String _subtitle,String _portal_pic,String _header_title,String _detail,String _poster,String _font_color,Integer _creater,Long _activity_id,Integer _status,Date _create_time,Date _update_time){          
+        YdTopic _ydTopicVO= new YdTopic();
+        _ydTopicVO.setId(_ydTopicVO.getId());
+        _ydTopicVO.setTitle(_ydTopicVO.getTitle());
+        _ydTopicVO.setSubtitle(_ydTopicVO.getSubtitle());
+        _ydTopicVO.setPortalPic(_ydTopicVO.getPortalPic());
+        _ydTopicVO.setHeaderTitle(_ydTopicVO.getHeaderTitle());
+        _ydTopicVO.setDetail(_ydTopicVO.getDetail());
+        _ydTopicVO.setPoster(_ydTopicVO.getPoster());
+        _ydTopicVO.setFontColor(_ydTopicVO.getFontColor());
+        _ydTopicVO.setCreater(_ydTopicVO.getCreater());
+        _ydTopicVO.setActivityId(_ydTopicVO.getActivityId());
+        _ydTopicVO.setStatus(_ydTopicVO.getStatus());
+        _ydTopicVO.setCreateTime(_ydTopicVO.getCreateTime());
+        _ydTopicVO.setUpdateTime(_ydTopicVO.getUpdateTime());
+        _ydTopicServiceImpl.saveYdTopic(_ydTopic);
+        }

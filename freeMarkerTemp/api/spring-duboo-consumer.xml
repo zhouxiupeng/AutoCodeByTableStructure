@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+@author ${author} ${email}
+@date ${timeMonth}
+ -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">     
+	
+	
+	<dubbo:application name="web-gate-1" />
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://172.51.97.111:10001" />
+	
+	<!-- 调用服务：【校验session】 -->
+	<dubbo:reference id="sessionService" interface="com.appcore.service.SessionService" />
+
+
+	
+<#list myClassList as myClass>
+	<!-- 调用服务:【${myClass.note}】 -->
+	<dubbo:reference id="${myClass.name}Service" interface="com.bluemobi.service${myClass.packageName}.${myClass.nameFU}Service" />
+</#list>
+
+</beans>

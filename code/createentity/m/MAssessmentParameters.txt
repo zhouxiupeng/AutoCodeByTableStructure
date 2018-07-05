@@ -1,0 +1,16 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMAssessmentParametersToDb(Long _id,String _assess_time,Date _create_time,String _parameters,String _server_ip){	     	
+    	MAssessmentParameters _mAssessmentParameters= new MAssessmentParameters();
+        _mAssessmentParameters.setId(_id);
+        _mAssessmentParameters.setAssessTime(_assess_time);
+        _mAssessmentParameters.setCreateTime(_create_time);
+        _mAssessmentParameters.setParameters(_parameters);
+        _mAssessmentParameters.setServerIp(_server_ip);
+        _mAssessmentParametersServiceImpl.saveMAssessmentParameters(_mAssessmentParameters);
+        }
+ 

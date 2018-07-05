@@ -1,0 +1,29 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveOnlinePaymentRecordToDb(Long _order_id,Long _user_id,byte[] _rece_account,Long _amount,String _evidence_id,String _trade_state,String _mer_date,Date _create_time,Date _update_time,String _ret_code,String _ret_msg,Integer _fee,Integer _fee_type,String _transfer_settle_date,String _status,String _recv_user_name,String _purpose,String _recv_bank_acc_pro){	     	
+    	OnlinePaymentRecord _onlinePaymentRecord= new OnlinePaymentRecord();
+        _onlinePaymentRecord.setOrderId(_order_id);
+        _onlinePaymentRecord.setUserId(_user_id);
+        _onlinePaymentRecord.setReceAccount(_rece_account);
+        _onlinePaymentRecord.setAmount(_amount);
+        _onlinePaymentRecord.setEvidenceId(_evidence_id);
+        _onlinePaymentRecord.setTradeState(_trade_state);
+        _onlinePaymentRecord.setMerDate(_mer_date);
+        _onlinePaymentRecord.setCreateTime(_create_time);
+        _onlinePaymentRecord.setUpdateTime(_update_time);
+        _onlinePaymentRecord.setRetCode(_ret_code);
+        _onlinePaymentRecord.setRetMsg(_ret_msg);
+        _onlinePaymentRecord.setFee(_fee);
+        _onlinePaymentRecord.setFeeType(_fee_type);
+        _onlinePaymentRecord.setTransferSettleDate(_transfer_settle_date);
+        _onlinePaymentRecord.setStatus(_status);
+        _onlinePaymentRecord.setRecvUserName(_recv_user_name);
+        _onlinePaymentRecord.setPurpose(_purpose);
+        _onlinePaymentRecord.setRecvBankAccPro(_recv_bank_acc_pro);
+        _onlinePaymentRecordServiceImpl.saveOnlinePaymentRecord(_onlinePaymentRecord);
+        }
+ 

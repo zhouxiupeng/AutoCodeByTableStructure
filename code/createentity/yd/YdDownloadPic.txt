@@ -1,0 +1,30 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdDownloadPicToDb(Integer _id,Integer _topic_info_id,Integer _uid,Integer _quality,Date _create_time,Date _update_time,Integer _photographer_uid){	     	
+    	YdDownloadPic _ydDownloadPic= new YdDownloadPic();
+        _ydDownloadPic.setId(_id);
+        _ydDownloadPic.setTopicInfoId(_topic_info_id);
+        _ydDownloadPic.setUid(_uid);
+        _ydDownloadPic.setQuality(_quality);
+        _ydDownloadPic.setCreateTime(_create_time);
+        _ydDownloadPic.setUpdateTime(_update_time);
+        _ydDownloadPic.setPhotographerUid(_photographer_uid);
+        _ydDownloadPicServiceImpl.saveYdDownloadPic(_ydDownloadPic);
+        }
+ 
+   
+   private void saveYdDownloadPicToDb(Integer _id,Integer _topic_info_id,Integer _uid,Integer _quality,Date _create_time,Date _update_time,Integer _photographer_uid){          
+        YdDownloadPic _ydDownloadPicVO= new YdDownloadPic();
+        _ydDownloadPicVO.setId(_ydDownloadPicVO.getId());
+        _ydDownloadPicVO.setTopicInfoId(_ydDownloadPicVO.getTopicInfoId());
+        _ydDownloadPicVO.setUid(_ydDownloadPicVO.getUid());
+        _ydDownloadPicVO.setQuality(_ydDownloadPicVO.getQuality());
+        _ydDownloadPicVO.setCreateTime(_ydDownloadPicVO.getCreateTime());
+        _ydDownloadPicVO.setUpdateTime(_ydDownloadPicVO.getUpdateTime());
+        _ydDownloadPicVO.setPhotographerUid(_ydDownloadPicVO.getPhotographerUid());
+        _ydDownloadPicServiceImpl.saveYdDownloadPic(_ydDownloadPic);
+        }

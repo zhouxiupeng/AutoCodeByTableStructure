@@ -1,0 +1,80 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdUserToDb(Long _uid,String _name,String _tel,String _passwd,Integer _del,String _user_img,String _background_img,Integer _status,Integer _first_register_ret,Integer _sex,String _real_name,Integer _height,Double _weight,Integer _age,Integer _province_id,Integer _city_id,String _postcode,String _address,String _qq_openid,String _wx_unionid,String _wx_openid,String _sina_uid,String _name_pinyin,Double _latitude,Double _longitude,Integer _utype,Integer _points,Date _createtime,Date _updatetime,String _signature,String _bound_tel,Integer _user_type){	     	
+    	YdUser _ydUser= new YdUser();
+        _ydUser.setUid(_uid);
+        _ydUser.setName(_name);
+        _ydUser.setTel(_tel);
+        _ydUser.setPasswd(_passwd);
+        _ydUser.setDel(_del);
+        _ydUser.setUserImg(_user_img);
+        _ydUser.setBackgroundImg(_background_img);
+        _ydUser.setStatus(_status);
+        _ydUser.setFirstRegisterRet(_first_register_ret);
+        _ydUser.setSex(_sex);
+        _ydUser.setRealName(_real_name);
+        _ydUser.setHeight(_height);
+        _ydUser.setWeight(_weight);
+        _ydUser.setAge(_age);
+        _ydUser.setProvinceId(_province_id);
+        _ydUser.setCityId(_city_id);
+        _ydUser.setPostcode(_postcode);
+        _ydUser.setAddress(_address);
+        _ydUser.setQqOpenid(_qq_openid);
+        _ydUser.setWxUnionid(_wx_unionid);
+        _ydUser.setWxOpenid(_wx_openid);
+        _ydUser.setSinaUid(_sina_uid);
+        _ydUser.setNamePinyin(_name_pinyin);
+        _ydUser.setLatitude(_latitude);
+        _ydUser.setLongitude(_longitude);
+        _ydUser.setUtype(_utype);
+        _ydUser.setPoints(_points);
+        _ydUser.setCreatetime(_createtime);
+        _ydUser.setUpdatetime(_updatetime);
+        _ydUser.setSignature(_signature);
+        _ydUser.setBoundTel(_bound_tel);
+        _ydUser.setUserType(_user_type);
+        _ydUserServiceImpl.saveYdUser(_ydUser);
+        }
+ 
+   
+   private void saveYdUserToDb(Long _uid,String _name,String _tel,String _passwd,Integer _del,String _user_img,String _background_img,Integer _status,Integer _first_register_ret,Integer _sex,String _real_name,Integer _height,Double _weight,Integer _age,Integer _province_id,Integer _city_id,String _postcode,String _address,String _qq_openid,String _wx_unionid,String _wx_openid,String _sina_uid,String _name_pinyin,Double _latitude,Double _longitude,Integer _utype,Integer _points,Date _createtime,Date _updatetime,String _signature,String _bound_tel,Integer _user_type){          
+        YdUser _ydUserVO= new YdUser();
+        _ydUserVO.setUid(_ydUserVO.getUid());
+        _ydUserVO.setName(_ydUserVO.getName());
+        _ydUserVO.setTel(_ydUserVO.getTel());
+        _ydUserVO.setPasswd(_ydUserVO.getPasswd());
+        _ydUserVO.setDel(_ydUserVO.getDel());
+        _ydUserVO.setUserImg(_ydUserVO.getUserImg());
+        _ydUserVO.setBackgroundImg(_ydUserVO.getBackgroundImg());
+        _ydUserVO.setStatus(_ydUserVO.getStatus());
+        _ydUserVO.setFirstRegisterRet(_ydUserVO.getFirstRegisterRet());
+        _ydUserVO.setSex(_ydUserVO.getSex());
+        _ydUserVO.setRealName(_ydUserVO.getRealName());
+        _ydUserVO.setHeight(_ydUserVO.getHeight());
+        _ydUserVO.setWeight(_ydUserVO.getWeight());
+        _ydUserVO.setAge(_ydUserVO.getAge());
+        _ydUserVO.setProvinceId(_ydUserVO.getProvinceId());
+        _ydUserVO.setCityId(_ydUserVO.getCityId());
+        _ydUserVO.setPostcode(_ydUserVO.getPostcode());
+        _ydUserVO.setAddress(_ydUserVO.getAddress());
+        _ydUserVO.setQqOpenid(_ydUserVO.getQqOpenid());
+        _ydUserVO.setWxUnionid(_ydUserVO.getWxUnionid());
+        _ydUserVO.setWxOpenid(_ydUserVO.getWxOpenid());
+        _ydUserVO.setSinaUid(_ydUserVO.getSinaUid());
+        _ydUserVO.setNamePinyin(_ydUserVO.getNamePinyin());
+        _ydUserVO.setLatitude(_ydUserVO.getLatitude());
+        _ydUserVO.setLongitude(_ydUserVO.getLongitude());
+        _ydUserVO.setUtype(_ydUserVO.getUtype());
+        _ydUserVO.setPoints(_ydUserVO.getPoints());
+        _ydUserVO.setCreatetime(_ydUserVO.getCreatetime());
+        _ydUserVO.setUpdatetime(_ydUserVO.getUpdatetime());
+        _ydUserVO.setSignature(_ydUserVO.getSignature());
+        _ydUserVO.setBoundTel(_ydUserVO.getBoundTel());
+        _ydUserVO.setUserType(_ydUserVO.getUserType());
+        _ydUserServiceImpl.saveYdUser(_ydUser);
+        }

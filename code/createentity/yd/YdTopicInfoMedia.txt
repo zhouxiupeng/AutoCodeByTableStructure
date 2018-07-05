@@ -1,0 +1,26 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdTopicInfoMediaToDb(Long _id,Long _topic_info_id,Long _media_id,Date _create_time,Date _update_time){	     	
+    	YdTopicInfoMedia _ydTopicInfoMedia= new YdTopicInfoMedia();
+        _ydTopicInfoMedia.setId(_id);
+        _ydTopicInfoMedia.setTopicInfoId(_topic_info_id);
+        _ydTopicInfoMedia.setMediaId(_media_id);
+        _ydTopicInfoMedia.setCreateTime(_create_time);
+        _ydTopicInfoMedia.setUpdateTime(_update_time);
+        _ydTopicInfoMediaServiceImpl.saveYdTopicInfoMedia(_ydTopicInfoMedia);
+        }
+ 
+   
+   private void saveYdTopicInfoMediaToDb(Long _id,Long _topic_info_id,Long _media_id,Date _create_time,Date _update_time){          
+        YdTopicInfoMedia _ydTopicInfoMediaVO= new YdTopicInfoMedia();
+        _ydTopicInfoMediaVO.setId(_ydTopicInfoMediaVO.getId());
+        _ydTopicInfoMediaVO.setTopicInfoId(_ydTopicInfoMediaVO.getTopicInfoId());
+        _ydTopicInfoMediaVO.setMediaId(_ydTopicInfoMediaVO.getMediaId());
+        _ydTopicInfoMediaVO.setCreateTime(_ydTopicInfoMediaVO.getCreateTime());
+        _ydTopicInfoMediaVO.setUpdateTime(_ydTopicInfoMediaVO.getUpdateTime());
+        _ydTopicInfoMediaServiceImpl.saveYdTopicInfoMedia(_ydTopicInfoMedia);
+        }

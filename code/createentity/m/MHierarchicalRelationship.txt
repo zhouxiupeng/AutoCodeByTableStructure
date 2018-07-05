@@ -1,0 +1,19 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMHierarchicalRelationshipToDb(Long _muid,Long _uid,Date _create_time,Long _groupleader_muid,Long _manager_muid,Long _director_muid,Long _refereer_muid,Date _update_time){	     	
+    	MHierarchicalRelationship _mHierarchicalRelationship= new MHierarchicalRelationship();
+        _mHierarchicalRelationship.setMuid(_muid);
+        _mHierarchicalRelationship.setUid(_uid);
+        _mHierarchicalRelationship.setCreateTime(_create_time);
+        _mHierarchicalRelationship.setGroupleaderMuid(_groupleader_muid);
+        _mHierarchicalRelationship.setManagerMuid(_manager_muid);
+        _mHierarchicalRelationship.setDirectorMuid(_director_muid);
+        _mHierarchicalRelationship.setRefereerMuid(_refereer_muid);
+        _mHierarchicalRelationship.setUpdateTime(_update_time);
+        _mHierarchicalRelationshipServiceImpl.saveMHierarchicalRelationship(_mHierarchicalRelationship);
+        }
+ 

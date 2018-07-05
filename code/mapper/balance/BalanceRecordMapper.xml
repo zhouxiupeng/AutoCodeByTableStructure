@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+【账号交易明细数据】对象关系映射 配置 
+ @author 代码自动生成 113857118@qq.com
+ @date 2017-12
+ -->
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.bluemobi.dao.BalanceRecordDao">
+
+	<resultMap id="balanceRecordResultMap" type="com.bluemobi.po.BalanceRecord">
+		<id property="balanceRecordId" column="balance_record_id" />
+       <result property="createTime" column="create_time" />
+       <result property="accountId" column="account_id" />
+       <result property="relateAccount" column="relate_account" />
+       <result property="type" column="type" />
+       <result property="money" column="money" />
+       <result property="comment" column="comment" />
+       <result property="operatorId" column="operator_id" />
+       <result property="chargeAgainst" column="charge_against" />
+       <result property="evidenceId" column="evidence_id" />
+       <result property="oldAmount" column="old_amount" />
+       <result property="newAmount" column="new_amount" />
+       <result property="balanceId" column="balance_id" />
+       <result property="balanceType" column="balance_type" />
+	</resultMap>
+	<resultMap id="mapResultMap"  type="java.util.HashMap" extends="balanceRecordResultMap"></resultMap>
+	<resultMap id="pageResultMap"  type="java.util.HashMap" extends="balanceRecordResultMap"></resultMap>
+	
+	
+	<insert id="insert" parameterType="com.bluemobi.po.BalanceRecord" useGeneratedKeys="true" keyProperty="balanceRecordId" >
+	   insert into balance_record (
+	     balance_record_id,
+	     create_time,
+	     account_id,
+	     relate_account,
+	     type,
+	     money,
+	     comment,
+	     operator_id,
+	     charge_against,
+	     evidence_id,
+	     old_amount,
+	     new_amount,
+	     balance_id,
+	     balance_type
+	   )values (
+	     #{balanceRecordId},
+	     #{createTime},
+	     #{accountId},
+	     #{relateAccount},
+	     #{type},
+	     #{money},
+	     #{comment},
+	     #{operatorId},
+	     #{chargeAgainst},
+	     #{evidenceId},
+	     #{oldAmount},
+	     #{newAmount},
+	     #{balanceId},
+	     #{balanceType}
+	   )
+	</insert>
+
+	<update id="update" parameterType="com.bluemobi.po.BalanceRecord">
+		update balance_record
+		<set>
+			<if test="balanceRecordId != null">
+				balance_record_id=#{balanceRecordId},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="accountId != null">
+				account_id=#{accountId},
+			</if>
+			<if test="relateAccount != null">
+				relate_account=#{relateAccount},
+			</if>
+			<if test="type != null">
+				type=#{type},
+			</if>
+			<if test="money != null">
+				money=#{money},
+			</if>
+			<if test="comment != null">
+				comment=#{comment},
+			</if>
+			<if test="operatorId != null">
+				operator_id=#{operatorId},
+			</if>
+			<if test="chargeAgainst != null">
+				charge_against=#{chargeAgainst},
+			</if>
+			<if test="evidenceId != null">
+				evidence_id=#{evidenceId},
+			</if>
+			<if test="oldAmount != null">
+				old_amount=#{oldAmount},
+			</if>
+			<if test="newAmount != null">
+				new_amount=#{newAmount},
+			</if>
+			<if test="balanceId != null">
+				balance_id=#{balanceId},
+			</if>
+			<if test="balanceType != null">
+				balance_type=#{balanceType},
+			</if>
+		</set>
+		<where>
+			balance_record_id=#{balanceRecordId} 
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="map">
+	   delete from 
+	     balance_record 
+	   where 
+	    balance_record_id=#{balanceRecordId} 
+	</delete>
+
+	<select id="selectObject" parameterType="map" resultMap="balanceRecordResultMap">
+	   select 
+	    balance_record_id,
+	    create_time,
+	    account_id,
+	    relate_account,
+	    type,
+	    money,
+	    comment,
+	    operator_id,
+	    charge_against,
+	    evidence_id,
+	    old_amount,
+	    new_amount,
+	    balance_id,
+	    balance_type
+	   from balance_record
+	   where 
+	    balance_record_id=#{balanceRecordId} 
+	</select>
+	
+	<select id="selectObjectList" parameterType="map" resultMap="balanceRecordResultMap">
+	   select 
+	     balance_record_id,
+	     create_time,
+	     account_id,
+	     relate_account,
+	     type,
+	     money,
+	     comment,
+	     operator_id,
+	     charge_against,
+	     evidence_id,
+	     old_amount,
+	     new_amount,
+	     balance_id,
+	     balance_type
+	   from balance_record
+	   <where>
+	     <if test="balanceRecordId != null">
+	        balance_record_id=#{balanceRecordId}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="accountId != null">
+	        and account_id=#{accountId}
+	     </if>
+	     <if test="relateAccount != null">
+	        and relate_account=#{relateAccount}
+	     </if>
+	     <if test="type != null">
+	        and type=#{type}
+	     </if>
+	     <if test="money != null">
+	        and money=#{money}
+	     </if>
+	     <if test="comment != null">
+	        and comment=#{comment}
+	     </if>
+	     <if test="operatorId != null">
+	        and operator_id=#{operatorId}
+	     </if>
+	     <if test="chargeAgainst != null">
+	        and charge_against=#{chargeAgainst}
+	     </if>
+	     <if test="evidenceId != null">
+	        and evidence_id=#{evidenceId}
+	     </if>
+	     <if test="oldAmount != null">
+	        and old_amount=#{oldAmount}
+	     </if>
+	     <if test="newAmount != null">
+	        and new_amount=#{newAmount}
+	     </if>
+	     <if test="balanceId != null">
+	        and balance_id=#{balanceId}
+	     </if>
+	     <if test="balanceType != null">
+	        and balance_type=#{balanceType}
+	     </if>
+	   </where>
+	</select>
+
+	<select id="selectMap" parameterType="map" resultMap="mapResultMap">
+	   select 
+	    balance_record_id,
+	    create_time,
+	    account_id,
+	    relate_account,
+	    type,
+	    money,
+	    comment,
+	    operator_id,
+	    charge_against,
+	    evidence_id,
+	    old_amount,
+	    new_amount,
+	    balance_id,
+	    balance_type
+	   from balance_record
+	   where 
+	    balance_record_id=#{balanceRecordId} 
+	</select>
+
+	<select id="selectMapList" parameterType="map" resultMap="mapResultMap">
+	   select 
+	     balance_record_id,
+	     create_time,
+	     account_id,
+	     relate_account,
+	     type,
+	     money,
+	     comment,
+	     operator_id,
+	     charge_against,
+	     evidence_id,
+	     old_amount,
+	     new_amount,
+	     balance_id,
+	     balance_type
+	   from balance_record
+	   <where>
+	     <if test="balanceRecordId != null">
+	        balance_record_id=#{balanceRecordId}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="accountId != null">
+	        and account_id=#{accountId}
+	     </if>
+	     <if test="relateAccount != null">
+	        and relate_account=#{relateAccount}
+	     </if>
+	     <if test="type != null">
+	        and type=#{type}
+	     </if>
+	     <if test="money != null">
+	        and money=#{money}
+	     </if>
+	     <if test="comment != null">
+	        and comment=#{comment}
+	     </if>
+	     <if test="operatorId != null">
+	        and operator_id=#{operatorId}
+	     </if>
+	     <if test="chargeAgainst != null">
+	        and charge_against=#{chargeAgainst}
+	     </if>
+	     <if test="evidenceId != null">
+	        and evidence_id=#{evidenceId}
+	     </if>
+	     <if test="oldAmount != null">
+	        and old_amount=#{oldAmount}
+	     </if>
+	     <if test="newAmount != null">
+	        and new_amount=#{newAmount}
+	     </if>
+	     <if test="balanceId != null">
+	        and balance_id=#{balanceId}
+	     </if>
+	     <if test="balanceType != null">
+	        and balance_type=#{balanceType}
+	     </if>
+	   </where>
+	</select>
+	
+	<select id="page" parameterType="map" resultMap="pageResultMap">
+	   select 
+	     balance_record_id,
+	     create_time,
+	     account_id,
+	     relate_account,
+	     type,
+	     money,
+	     comment,
+	     operator_id,
+	     charge_against,
+	     evidence_id,
+	     old_amount,
+	     new_amount,
+	     balance_id,
+	     balance_type
+	<include refid="pageCondition" />
+	limit #{offset},#{rows}
+	</select>
+
+	<select id="pageCount" parameterType="map" resultType="int">
+	   select count(1)
+	   <include refid="pageCondition" />
+	</select>
+
+	<sql id="pageCondition">
+	   from balance_record
+	   <where>
+	     <if test="balanceRecordId != null">
+	        balance_record_id=#{balanceRecordId}
+	     </if>
+	     <if test="createTime != null">
+	        and create_time=#{createTime}
+	     </if>
+	     <if test="accountId != null">
+	        and account_id=#{accountId}
+	     </if>
+	     <if test="relateAccount != null">
+	        and relate_account=#{relateAccount}
+	     </if>
+	     <if test="type != null">
+	        and type=#{type}
+	     </if>
+	     <if test="money != null">
+	        and money=#{money}
+	     </if>
+	     <if test="comment != null">
+	        and comment=#{comment}
+	     </if>
+	     <if test="operatorId != null">
+	        and operator_id=#{operatorId}
+	     </if>
+	     <if test="chargeAgainst != null">
+	        and charge_against=#{chargeAgainst}
+	     </if>
+	     <if test="evidenceId != null">
+	        and evidence_id=#{evidenceId}
+	     </if>
+	     <if test="oldAmount != null">
+	        and old_amount=#{oldAmount}
+	     </if>
+	     <if test="newAmount != null">
+	        and new_amount=#{newAmount}
+	     </if>
+	     <if test="balanceId != null">
+	        and balance_id=#{balanceId}
+	     </if>
+	     <if test="balanceType != null">
+	        and balance_type=#{balanceType}
+	     </if>
+	   </where>
+	</sql>
+
+	
+</mapper> 

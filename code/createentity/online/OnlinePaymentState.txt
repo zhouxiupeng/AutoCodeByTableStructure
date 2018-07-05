@@ -1,0 +1,15 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveOnlinePaymentStateToDb(Long _order_id,String _mer_date,Date _nest_update_time,Date _last_update_time){	     	
+    	OnlinePaymentState _onlinePaymentState= new OnlinePaymentState();
+        _onlinePaymentState.setOrderId(_order_id);
+        _onlinePaymentState.setMerDate(_mer_date);
+        _onlinePaymentState.setNestUpdateTime(_nest_update_time);
+        _onlinePaymentState.setLastUpdateTime(_last_update_time);
+        _onlinePaymentStateServiceImpl.saveOnlinePaymentState(_onlinePaymentState);
+        }
+ 

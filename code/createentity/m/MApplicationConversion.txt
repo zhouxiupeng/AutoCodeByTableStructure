@@ -1,0 +1,20 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMApplicationConversionToDb(Long _muid,Integer _process,Long _uid,Date _apply_time,Date _force_time,String _change_cause,Long _id,Date _update_time,Long _refereer_uid){	     	
+    	MApplicationConversion _mApplicationConversion= new MApplicationConversion();
+        _mApplicationConversion.setMuid(_muid);
+        _mApplicationConversion.setProcess(_process);
+        _mApplicationConversion.setUid(_uid);
+        _mApplicationConversion.setApplyTime(_apply_time);
+        _mApplicationConversion.setForceTime(_force_time);
+        _mApplicationConversion.setChangeCause(_change_cause);
+        _mApplicationConversion.setId(_id);
+        _mApplicationConversion.setUpdateTime(_update_time);
+        _mApplicationConversion.setRefereerUid(_refereer_uid);
+        _mApplicationConversionServiceImpl.saveMApplicationConversion(_mApplicationConversion);
+        }
+ 

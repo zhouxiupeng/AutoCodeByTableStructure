@@ -1,0 +1,50 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamUpgradeInfoToDb(Long _muid,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Date _assess_start_time,Date _assess_end_time,Integer _total_members_number,String _archiving_time){	     	
+    	MTeamUpgradeInfo _mTeamUpgradeInfo= new MTeamUpgradeInfo();
+        _mTeamUpgradeInfo.setMuid(_muid);
+        _mTeamUpgradeInfo.setCreateTime(_create_time);
+        _mTeamUpgradeInfo.setUploadCount(_upload_count);
+        _mTeamUpgradeInfo.setDownloadCount(_download_count);
+        _mTeamUpgradeInfo.setThanksNumber(_thanks_number);
+        _mTeamUpgradeInfo.setThanksAmount(_thanks_amount);
+        _mTeamUpgradeInfo.setProfit(_profit);
+        _mTeamUpgradeInfo.setCultivationAmount(_cultivation_amount);
+        _mTeamUpgradeInfo.setCoachAmount(_coach_amount);
+        _mTeamUpgradeInfo.setResultsAmount(_results_amount);
+        _mTeamUpgradeInfo.setActiveManpower(_active_manpower);
+        _mTeamUpgradeInfo.setOneTrainingEducation(_one_training_education);
+        _mTeamUpgradeInfo.setTwoTrainingEducation(_two_training_education);
+        _mTeamUpgradeInfo.setAssessStartTime(_assess_start_time);
+        _mTeamUpgradeInfo.setAssessEndTime(_assess_end_time);
+        _mTeamUpgradeInfo.setTotalMembersNumber(_total_members_number);
+        _mTeamUpgradeInfo.setArchivingTime(_archiving_time);
+        _mTeamUpgradeInfoServiceImpl.saveMTeamUpgradeInfo(_mTeamUpgradeInfo);
+        }
+ 
+   
+   private void saveMTeamUpgradeInfoToDb(Long _muid,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Date _assess_start_time,Date _assess_end_time,Integer _total_members_number,String _archiving_time){          
+        MTeamUpgradeInfo _mTeamUpgradeInfoVO= new MTeamUpgradeInfo();
+        _mTeamUpgradeInfoVO.setMuid(_mTeamUpgradeInfoVO.getMuid());
+        _mTeamUpgradeInfoVO.setCreateTime(_mTeamUpgradeInfoVO.getCreateTime());
+        _mTeamUpgradeInfoVO.setUploadCount(_mTeamUpgradeInfoVO.getUploadCount());
+        _mTeamUpgradeInfoVO.setDownloadCount(_mTeamUpgradeInfoVO.getDownloadCount());
+        _mTeamUpgradeInfoVO.setThanksNumber(_mTeamUpgradeInfoVO.getThanksNumber());
+        _mTeamUpgradeInfoVO.setThanksAmount(_mTeamUpgradeInfoVO.getThanksAmount());
+        _mTeamUpgradeInfoVO.setProfit(_mTeamUpgradeInfoVO.getProfit());
+        _mTeamUpgradeInfoVO.setCultivationAmount(_mTeamUpgradeInfoVO.getCultivationAmount());
+        _mTeamUpgradeInfoVO.setCoachAmount(_mTeamUpgradeInfoVO.getCoachAmount());
+        _mTeamUpgradeInfoVO.setResultsAmount(_mTeamUpgradeInfoVO.getResultsAmount());
+        _mTeamUpgradeInfoVO.setActiveManpower(_mTeamUpgradeInfoVO.getActiveManpower());
+        _mTeamUpgradeInfoVO.setOneTrainingEducation(_mTeamUpgradeInfoVO.getOneTrainingEducation());
+        _mTeamUpgradeInfoVO.setTwoTrainingEducation(_mTeamUpgradeInfoVO.getTwoTrainingEducation());
+        _mTeamUpgradeInfoVO.setAssessStartTime(_mTeamUpgradeInfoVO.getAssessStartTime());
+        _mTeamUpgradeInfoVO.setAssessEndTime(_mTeamUpgradeInfoVO.getAssessEndTime());
+        _mTeamUpgradeInfoVO.setTotalMembersNumber(_mTeamUpgradeInfoVO.getTotalMembersNumber());
+        _mTeamUpgradeInfoVO.setArchivingTime(_mTeamUpgradeInfoVO.getArchivingTime());
+        _mTeamUpgradeInfoServiceImpl.saveMTeamUpgradeInfo(_mTeamUpgradeInfo);
+        }

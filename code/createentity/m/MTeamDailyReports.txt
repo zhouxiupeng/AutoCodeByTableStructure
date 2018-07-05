@@ -1,0 +1,22 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamDailyReportsToDb(Long _muid,Date _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount){	     	
+    	MTeamDailyReports _mTeamDailyReports= new MTeamDailyReports();
+        _mTeamDailyReports.setMuid(_muid);
+        _mTeamDailyReports.setArchivingTime(_archiving_time);
+        _mTeamDailyReports.setCreateTime(_create_time);
+        _mTeamDailyReports.setUploadCount(_upload_count);
+        _mTeamDailyReports.setDownloadCount(_download_count);
+        _mTeamDailyReports.setThanksNumber(_thanks_number);
+        _mTeamDailyReports.setThanksAmount(_thanks_amount);
+        _mTeamDailyReports.setProfit(_profit);
+        _mTeamDailyReports.setCultivationAmount(_cultivation_amount);
+        _mTeamDailyReports.setCoachAmount(_coach_amount);
+        _mTeamDailyReports.setResultsAmount(_results_amount);
+        _mTeamDailyReportsServiceImpl.saveMTeamDailyReports(_mTeamDailyReports);
+        }
+ 

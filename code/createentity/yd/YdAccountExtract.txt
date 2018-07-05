@@ -1,0 +1,15 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveYdAccountExtractToDb(Integer _id,Integer _account_id,String _order_no,Date _create_time){	     	
+    	YdAccountExtract _ydAccountExtract= new YdAccountExtract();
+        _ydAccountExtract.setId(_id);
+        _ydAccountExtract.setAccountId(_account_id);
+        _ydAccountExtract.setOrderNo(_order_no);
+        _ydAccountExtract.setCreateTime(_create_time);
+        _ydAccountExtractServiceImpl.saveYdAccountExtract(_ydAccountExtract);
+        }
+ 

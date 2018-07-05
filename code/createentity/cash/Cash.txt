@@ -1,0 +1,15 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveCashToDb(Integer _id,Integer _amount,Integer _uid,Date _update_time){	     	
+    	Cash _cash= new Cash();
+        _cash.setId(_id);
+        _cash.setAmount(_amount);
+        _cash.setUid(_uid);
+        _cash.setUpdateTime(_update_time);
+        _cashServiceImpl.saveCash(_cash);
+        }
+ 

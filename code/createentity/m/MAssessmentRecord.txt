@@ -1,0 +1,19 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMAssessmentRecordToDb(Long _muid,Long _uid,String _assess_time,Date _create_time,Integer _pre_level,Integer _later_level,Integer _status,Date _update_time){	     	
+    	MAssessmentRecord _mAssessmentRecord= new MAssessmentRecord();
+        _mAssessmentRecord.setMuid(_muid);
+        _mAssessmentRecord.setUid(_uid);
+        _mAssessmentRecord.setAssessTime(_assess_time);
+        _mAssessmentRecord.setCreateTime(_create_time);
+        _mAssessmentRecord.setPreLevel(_pre_level);
+        _mAssessmentRecord.setLaterLevel(_later_level);
+        _mAssessmentRecord.setStatus(_status);
+        _mAssessmentRecord.setUpdateTime(_update_time);
+        _mAssessmentRecordServiceImpl.saveMAssessmentRecord(_mAssessmentRecord);
+        }
+ 

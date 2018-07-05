@@ -1,0 +1,28 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveUmfCommauthRecordToDb(String _mer_id,String _order_id,Date _transfer_settle_date,Date _transfer_acc_date,Integer _auth_mode,Integer _tran_state){	     	
+    	UmfCommauthRecord _umfCommauthRecord= new UmfCommauthRecord();
+        _umfCommauthRecord.setMerId(_mer_id);
+        _umfCommauthRecord.setOrderId(_order_id);
+        _umfCommauthRecord.setTransferSettleDate(_transfer_settle_date);
+        _umfCommauthRecord.setTransferAccDate(_transfer_acc_date);
+        _umfCommauthRecord.setAuthMode(_auth_mode);
+        _umfCommauthRecord.setTranState(_tran_state);
+        _umfCommauthRecordServiceImpl.saveUmfCommauthRecord(_umfCommauthRecord);
+        }
+ 
+   
+   private void saveUmfCommauthRecordToDb(String _mer_id,String _order_id,Date _transfer_settle_date,Date _transfer_acc_date,Integer _auth_mode,Integer _tran_state){          
+        UmfCommauthRecord _umfCommauthRecordVO= new UmfCommauthRecord();
+        _umfCommauthRecordVO.setMerId(_umfCommauthRecordVO.getMerId());
+        _umfCommauthRecordVO.setOrderId(_umfCommauthRecordVO.getOrderId());
+        _umfCommauthRecordVO.setTransferSettleDate(_umfCommauthRecordVO.getTransferSettleDate());
+        _umfCommauthRecordVO.setTransferAccDate(_umfCommauthRecordVO.getTransferAccDate());
+        _umfCommauthRecordVO.setAuthMode(_umfCommauthRecordVO.getAuthMode());
+        _umfCommauthRecordVO.setTranState(_umfCommauthRecordVO.getTranState());
+        _umfCommauthRecordServiceImpl.saveUmfCommauthRecord(_umfCommauthRecord);
+        }

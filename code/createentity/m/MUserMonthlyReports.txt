@@ -1,0 +1,34 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMUserMonthlyReportsToDb(Long _muid,String _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _test_results,Integer _user_level){	     	
+    	MUserMonthlyReports _mUserMonthlyReports= new MUserMonthlyReports();
+        _mUserMonthlyReports.setMuid(_muid);
+        _mUserMonthlyReports.setArchivingTime(_archiving_time);
+        _mUserMonthlyReports.setCreateTime(_create_time);
+        _mUserMonthlyReports.setUploadCount(_upload_count);
+        _mUserMonthlyReports.setDownloadCount(_download_count);
+        _mUserMonthlyReports.setThanksNumber(_thanks_number);
+        _mUserMonthlyReports.setThanksAmount(_thanks_amount);
+        _mUserMonthlyReports.setTestResults(_test_results);
+        _mUserMonthlyReports.setUserLevel(_user_level);
+        _mUserMonthlyReportsServiceImpl.saveMUserMonthlyReports(_mUserMonthlyReports);
+        }
+ 
+   
+   private void saveMUserMonthlyReportsToDb(Long _muid,String _archiving_time,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _test_results,Integer _user_level){          
+        MUserMonthlyReports _mUserMonthlyReportsVO= new MUserMonthlyReports();
+        _mUserMonthlyReportsVO.setMuid(_mUserMonthlyReportsVO.getMuid());
+        _mUserMonthlyReportsVO.setArchivingTime(_mUserMonthlyReportsVO.getArchivingTime());
+        _mUserMonthlyReportsVO.setCreateTime(_mUserMonthlyReportsVO.getCreateTime());
+        _mUserMonthlyReportsVO.setUploadCount(_mUserMonthlyReportsVO.getUploadCount());
+        _mUserMonthlyReportsVO.setDownloadCount(_mUserMonthlyReportsVO.getDownloadCount());
+        _mUserMonthlyReportsVO.setThanksNumber(_mUserMonthlyReportsVO.getThanksNumber());
+        _mUserMonthlyReportsVO.setThanksAmount(_mUserMonthlyReportsVO.getThanksAmount());
+        _mUserMonthlyReportsVO.setTestResults(_mUserMonthlyReportsVO.getTestResults());
+        _mUserMonthlyReportsVO.setUserLevel(_mUserMonthlyReportsVO.getUserLevel());
+        _mUserMonthlyReportsServiceImpl.saveMUserMonthlyReports(_mUserMonthlyReports);
+        }

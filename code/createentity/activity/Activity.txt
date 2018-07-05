@@ -1,0 +1,19 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveActivityToDb(Integer _id,String _title,Integer _status,Integer _type,Integer _site,Date _start,Date _end,Date _create_time){	     	
+    	Activity _activity= new Activity();
+        _activity.setId(_id);
+        _activity.setTitle(_title);
+        _activity.setStatus(_status);
+        _activity.setType(_type);
+        _activity.setSite(_site);
+        _activity.setStart(_start);
+        _activity.setEnd(_end);
+        _activity.setCreateTime(_create_time);
+        _activityServiceImpl.saveActivity(_activity);
+        }
+ 

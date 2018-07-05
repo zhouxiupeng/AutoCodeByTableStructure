@@ -1,0 +1,50 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamKeepInfoToDb(Long _muid,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Date _assess_start_time,Date _assess_end_time,Date _archiving_time,Integer _management_number){	     	
+    	MTeamKeepInfo _mTeamKeepInfo= new MTeamKeepInfo();
+        _mTeamKeepInfo.setMuid(_muid);
+        _mTeamKeepInfo.setCreateTime(_create_time);
+        _mTeamKeepInfo.setUploadCount(_upload_count);
+        _mTeamKeepInfo.setDownloadCount(_download_count);
+        _mTeamKeepInfo.setThanksNumber(_thanks_number);
+        _mTeamKeepInfo.setThanksAmount(_thanks_amount);
+        _mTeamKeepInfo.setProfit(_profit);
+        _mTeamKeepInfo.setCultivationAmount(_cultivation_amount);
+        _mTeamKeepInfo.setCoachAmount(_coach_amount);
+        _mTeamKeepInfo.setResultsAmount(_results_amount);
+        _mTeamKeepInfo.setActiveManpower(_active_manpower);
+        _mTeamKeepInfo.setOneTrainingEducation(_one_training_education);
+        _mTeamKeepInfo.setTwoTrainingEducation(_two_training_education);
+        _mTeamKeepInfo.setAssessStartTime(_assess_start_time);
+        _mTeamKeepInfo.setAssessEndTime(_assess_end_time);
+        _mTeamKeepInfo.setArchivingTime(_archiving_time);
+        _mTeamKeepInfo.setManagementNumber(_management_number);
+        _mTeamKeepInfoServiceImpl.saveMTeamKeepInfo(_mTeamKeepInfo);
+        }
+ 
+   
+   private void saveMTeamKeepInfoToDb(Long _muid,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Date _assess_start_time,Date _assess_end_time,Date _archiving_time,Integer _management_number){          
+        MTeamKeepInfo _mTeamKeepInfoVO= new MTeamKeepInfo();
+        _mTeamKeepInfoVO.setMuid(_mTeamKeepInfoVO.getMuid());
+        _mTeamKeepInfoVO.setCreateTime(_mTeamKeepInfoVO.getCreateTime());
+        _mTeamKeepInfoVO.setUploadCount(_mTeamKeepInfoVO.getUploadCount());
+        _mTeamKeepInfoVO.setDownloadCount(_mTeamKeepInfoVO.getDownloadCount());
+        _mTeamKeepInfoVO.setThanksNumber(_mTeamKeepInfoVO.getThanksNumber());
+        _mTeamKeepInfoVO.setThanksAmount(_mTeamKeepInfoVO.getThanksAmount());
+        _mTeamKeepInfoVO.setProfit(_mTeamKeepInfoVO.getProfit());
+        _mTeamKeepInfoVO.setCultivationAmount(_mTeamKeepInfoVO.getCultivationAmount());
+        _mTeamKeepInfoVO.setCoachAmount(_mTeamKeepInfoVO.getCoachAmount());
+        _mTeamKeepInfoVO.setResultsAmount(_mTeamKeepInfoVO.getResultsAmount());
+        _mTeamKeepInfoVO.setActiveManpower(_mTeamKeepInfoVO.getActiveManpower());
+        _mTeamKeepInfoVO.setOneTrainingEducation(_mTeamKeepInfoVO.getOneTrainingEducation());
+        _mTeamKeepInfoVO.setTwoTrainingEducation(_mTeamKeepInfoVO.getTwoTrainingEducation());
+        _mTeamKeepInfoVO.setAssessStartTime(_mTeamKeepInfoVO.getAssessStartTime());
+        _mTeamKeepInfoVO.setAssessEndTime(_mTeamKeepInfoVO.getAssessEndTime());
+        _mTeamKeepInfoVO.setArchivingTime(_mTeamKeepInfoVO.getArchivingTime());
+        _mTeamKeepInfoVO.setManagementNumber(_mTeamKeepInfoVO.getManagementNumber());
+        _mTeamKeepInfoServiceImpl.saveMTeamKeepInfo(_mTeamKeepInfo);
+        }

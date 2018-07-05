@@ -1,0 +1,28 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMReferralRelationshipToDb(Long _muid,Long _relation_muid,Date _create_time,Integer _muid_level,Integer _relation_muid_level,Integer _status){	     	
+    	MReferralRelationship _mReferralRelationship= new MReferralRelationship();
+        _mReferralRelationship.setMuid(_muid);
+        _mReferralRelationship.setRelationMuid(_relation_muid);
+        _mReferralRelationship.setCreateTime(_create_time);
+        _mReferralRelationship.setMuidLevel(_muid_level);
+        _mReferralRelationship.setRelationMuidLevel(_relation_muid_level);
+        _mReferralRelationship.setStatus(_status);
+        _mReferralRelationshipServiceImpl.saveMReferralRelationship(_mReferralRelationship);
+        }
+ 
+   
+   private void saveMReferralRelationshipToDb(Long _muid,Long _relation_muid,Date _create_time,Integer _muid_level,Integer _relation_muid_level,Integer _status){          
+        MReferralRelationship _mReferralRelationshipVO= new MReferralRelationship();
+        _mReferralRelationshipVO.setMuid(_mReferralRelationshipVO.getMuid());
+        _mReferralRelationshipVO.setRelationMuid(_mReferralRelationshipVO.getRelationMuid());
+        _mReferralRelationshipVO.setCreateTime(_mReferralRelationshipVO.getCreateTime());
+        _mReferralRelationshipVO.setMuidLevel(_mReferralRelationshipVO.getMuidLevel());
+        _mReferralRelationshipVO.setRelationMuidLevel(_mReferralRelationshipVO.getRelationMuidLevel());
+        _mReferralRelationshipVO.setStatus(_mReferralRelationshipVO.getStatus());
+        _mReferralRelationshipServiceImpl.saveMReferralRelationship(_mReferralRelationship);
+        }

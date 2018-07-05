@@ -1,0 +1,23 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveCardAuthenticationToDb(Long _order_id,String _mer_id,byte[] _bank_account,String _account_name,byte[] _idectity_code,String _mobile_id,String _com_amt_type,Date _create_time,String _ret_code,String _ret_msg,String _is_charge,Long _uid){	     	
+    	CardAuthentication _cardAuthentication= new CardAuthentication();
+        _cardAuthentication.setOrderId(_order_id);
+        _cardAuthentication.setMerId(_mer_id);
+        _cardAuthentication.setBankAccount(_bank_account);
+        _cardAuthentication.setAccountName(_account_name);
+        _cardAuthentication.setIdectityCode(_idectity_code);
+        _cardAuthentication.setMobileId(_mobile_id);
+        _cardAuthentication.setComAmtType(_com_amt_type);
+        _cardAuthentication.setCreateTime(_create_time);
+        _cardAuthentication.setRetCode(_ret_code);
+        _cardAuthentication.setRetMsg(_ret_msg);
+        _cardAuthentication.setIsCharge(_is_charge);
+        _cardAuthentication.setUid(_uid);
+        _cardAuthenticationServiceImpl.saveCardAuthentication(_cardAuthentication);
+        }
+ 

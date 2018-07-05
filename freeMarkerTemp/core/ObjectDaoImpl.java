@@ -79,7 +79,7 @@ public class ${nameFU}DaoImpl extends AbstractDao implements I${nameFU}Dao {
 	  StringBuilder strSql=new StringBuilder();
   	 strSql.append("update "+BaseUtil.database_name+".${dbName}  set "); 
 		<#list propertyList as p>	
-		strSql.append("${p.dbName}=${maoHao}${p.name},");		
+		strSql.append("${p.dbName}=${maoHao}${p.name}<#if p_has_next>,</#if>");		
 		</#list>
 		strSql.append(" where ");
 		<#list pkPropertyList as pk>

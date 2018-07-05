@@ -1,0 +1,58 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMUserInfoToDb(Long _muid,Long _uid,Integer _sys_type,Integer _user_level,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _person_type,Date _assess_start_time,Date _assess_end_time,Integer _income_ratio,Integer _status,Integer _process,Integer _history_top_level,Date _history_top_level_time,Date _level_change_time,Date _update_time,Integer _is_activity,Date _archiving_time){	     	
+    	MUserInfo _mUserInfo= new MUserInfo();
+        _mUserInfo.setMuid(_muid);
+        _mUserInfo.setUid(_uid);
+        _mUserInfo.setSysType(_sys_type);
+        _mUserInfo.setUserLevel(_user_level);
+        _mUserInfo.setCreateTime(_create_time);
+        _mUserInfo.setUploadCount(_upload_count);
+        _mUserInfo.setDownloadCount(_download_count);
+        _mUserInfo.setThanksNumber(_thanks_number);
+        _mUserInfo.setThanksAmount(_thanks_amount);
+        _mUserInfo.setPersonType(_person_type);
+        _mUserInfo.setAssessStartTime(_assess_start_time);
+        _mUserInfo.setAssessEndTime(_assess_end_time);
+        _mUserInfo.setIncomeRatio(_income_ratio);
+        _mUserInfo.setStatus(_status);
+        _mUserInfo.setProcess(_process);
+        _mUserInfo.setHistoryTopLevel(_history_top_level);
+        _mUserInfo.setHistoryTopLevelTime(_history_top_level_time);
+        _mUserInfo.setLevelChangeTime(_level_change_time);
+        _mUserInfo.setUpdateTime(_update_time);
+        _mUserInfo.setIsActivity(_is_activity);
+        _mUserInfo.setArchivingTime(_archiving_time);
+        _mUserInfoServiceImpl.saveMUserInfo(_mUserInfo);
+        }
+ 
+   
+   private void saveMUserInfoToDb(Long _muid,Long _uid,Integer _sys_type,Integer _user_level,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Integer _person_type,Date _assess_start_time,Date _assess_end_time,Integer _income_ratio,Integer _status,Integer _process,Integer _history_top_level,Date _history_top_level_time,Date _level_change_time,Date _update_time,Integer _is_activity,Date _archiving_time){          
+        MUserInfo _mUserInfoVO= new MUserInfo();
+        _mUserInfoVO.setMuid(_mUserInfoVO.getMuid());
+        _mUserInfoVO.setUid(_mUserInfoVO.getUid());
+        _mUserInfoVO.setSysType(_mUserInfoVO.getSysType());
+        _mUserInfoVO.setUserLevel(_mUserInfoVO.getUserLevel());
+        _mUserInfoVO.setCreateTime(_mUserInfoVO.getCreateTime());
+        _mUserInfoVO.setUploadCount(_mUserInfoVO.getUploadCount());
+        _mUserInfoVO.setDownloadCount(_mUserInfoVO.getDownloadCount());
+        _mUserInfoVO.setThanksNumber(_mUserInfoVO.getThanksNumber());
+        _mUserInfoVO.setThanksAmount(_mUserInfoVO.getThanksAmount());
+        _mUserInfoVO.setPersonType(_mUserInfoVO.getPersonType());
+        _mUserInfoVO.setAssessStartTime(_mUserInfoVO.getAssessStartTime());
+        _mUserInfoVO.setAssessEndTime(_mUserInfoVO.getAssessEndTime());
+        _mUserInfoVO.setIncomeRatio(_mUserInfoVO.getIncomeRatio());
+        _mUserInfoVO.setStatus(_mUserInfoVO.getStatus());
+        _mUserInfoVO.setProcess(_mUserInfoVO.getProcess());
+        _mUserInfoVO.setHistoryTopLevel(_mUserInfoVO.getHistoryTopLevel());
+        _mUserInfoVO.setHistoryTopLevelTime(_mUserInfoVO.getHistoryTopLevelTime());
+        _mUserInfoVO.setLevelChangeTime(_mUserInfoVO.getLevelChangeTime());
+        _mUserInfoVO.setUpdateTime(_mUserInfoVO.getUpdateTime());
+        _mUserInfoVO.setIsActivity(_mUserInfoVO.getIsActivity());
+        _mUserInfoVO.setArchivingTime(_mUserInfoVO.getArchivingTime());
+        _mUserInfoServiceImpl.saveMUserInfo(_mUserInfo);
+        }

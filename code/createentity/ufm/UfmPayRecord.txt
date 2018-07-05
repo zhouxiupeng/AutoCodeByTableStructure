@@ -1,0 +1,40 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveUfmPayRecordToDb(String _mer_id,String _fun_code,String _order_id,String _mer_date,Long _amount,Integer _com_amt,Date _transfer_settle_date,Date _transfer_acc_date,String _trans_state,String _trade_no,Integer _com_amt_type,String _product_id){	     	
+    	UfmPayRecord _ufmPayRecord= new UfmPayRecord();
+        _ufmPayRecord.setMerId(_mer_id);
+        _ufmPayRecord.setFunCode(_fun_code);
+        _ufmPayRecord.setOrderId(_order_id);
+        _ufmPayRecord.setMerDate(_mer_date);
+        _ufmPayRecord.setAmount(_amount);
+        _ufmPayRecord.setComAmt(_com_amt);
+        _ufmPayRecord.setTransferSettleDate(_transfer_settle_date);
+        _ufmPayRecord.setTransferAccDate(_transfer_acc_date);
+        _ufmPayRecord.setTransState(_trans_state);
+        _ufmPayRecord.setTradeNo(_trade_no);
+        _ufmPayRecord.setComAmtType(_com_amt_type);
+        _ufmPayRecord.setProductId(_product_id);
+        _ufmPayRecordServiceImpl.saveUfmPayRecord(_ufmPayRecord);
+        }
+ 
+   
+   private void saveUfmPayRecordToDb(String _mer_id,String _fun_code,String _order_id,String _mer_date,Long _amount,Integer _com_amt,Date _transfer_settle_date,Date _transfer_acc_date,String _trans_state,String _trade_no,Integer _com_amt_type,String _product_id){          
+        UfmPayRecord _ufmPayRecordVO= new UfmPayRecord();
+        _ufmPayRecordVO.setMerId(_ufmPayRecordVO.getMerId());
+        _ufmPayRecordVO.setFunCode(_ufmPayRecordVO.getFunCode());
+        _ufmPayRecordVO.setOrderId(_ufmPayRecordVO.getOrderId());
+        _ufmPayRecordVO.setMerDate(_ufmPayRecordVO.getMerDate());
+        _ufmPayRecordVO.setAmount(_ufmPayRecordVO.getAmount());
+        _ufmPayRecordVO.setComAmt(_ufmPayRecordVO.getComAmt());
+        _ufmPayRecordVO.setTransferSettleDate(_ufmPayRecordVO.getTransferSettleDate());
+        _ufmPayRecordVO.setTransferAccDate(_ufmPayRecordVO.getTransferAccDate());
+        _ufmPayRecordVO.setTransState(_ufmPayRecordVO.getTransState());
+        _ufmPayRecordVO.setTradeNo(_ufmPayRecordVO.getTradeNo());
+        _ufmPayRecordVO.setComAmtType(_ufmPayRecordVO.getComAmtType());
+        _ufmPayRecordVO.setProductId(_ufmPayRecordVO.getProductId());
+        _ufmPayRecordServiceImpl.saveUfmPayRecord(_ufmPayRecord);
+        }

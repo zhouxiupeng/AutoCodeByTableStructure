@@ -1,0 +1,26 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveMTeamInfoToDb(Long _muid,Date _create_time,Long _upload_count,Long _download_count,Integer _thanks_number,Long _thanks_amount,Long _profit,Long _cultivation_amount,Long _coach_amount,Long _results_amount,Integer _active_manpower,Integer _one_training_education,Integer _two_training_education,Date _assess_start_time,Date _assess_end_time){	     	
+    	MTeamInfo _mTeamInfo= new MTeamInfo();
+        _mTeamInfo.setMuid(_muid);
+        _mTeamInfo.setCreateTime(_create_time);
+        _mTeamInfo.setUploadCount(_upload_count);
+        _mTeamInfo.setDownloadCount(_download_count);
+        _mTeamInfo.setThanksNumber(_thanks_number);
+        _mTeamInfo.setThanksAmount(_thanks_amount);
+        _mTeamInfo.setProfit(_profit);
+        _mTeamInfo.setCultivationAmount(_cultivation_amount);
+        _mTeamInfo.setCoachAmount(_coach_amount);
+        _mTeamInfo.setResultsAmount(_results_amount);
+        _mTeamInfo.setActiveManpower(_active_manpower);
+        _mTeamInfo.setOneTrainingEducation(_one_training_education);
+        _mTeamInfo.setTwoTrainingEducation(_two_training_education);
+        _mTeamInfo.setAssessStartTime(_assess_start_time);
+        _mTeamInfo.setAssessEndTime(_assess_end_time);
+        _mTeamInfoServiceImpl.saveMTeamInfo(_mTeamInfo);
+        }
+ 

@@ -1,0 +1,30 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveUmfAccountAnalyseToDb(Date _transfer_settle_date,Integer _data_type,Integer _status,Integer _all_trade_frequency,Long _all_trade_money,Integer _all_in_service_charge,Integer _all_out_service_charge){	     	
+    	UmfAccountAnalyse _umfAccountAnalyse= new UmfAccountAnalyse();
+        _umfAccountAnalyse.setTransferSettleDate(_transfer_settle_date);
+        _umfAccountAnalyse.setDataType(_data_type);
+        _umfAccountAnalyse.setStatus(_status);
+        _umfAccountAnalyse.setAllTradeFrequency(_all_trade_frequency);
+        _umfAccountAnalyse.setAllTradeMoney(_all_trade_money);
+        _umfAccountAnalyse.setAllInServiceCharge(_all_in_service_charge);
+        _umfAccountAnalyse.setAllOutServiceCharge(_all_out_service_charge);
+        _umfAccountAnalyseServiceImpl.saveUmfAccountAnalyse(_umfAccountAnalyse);
+        }
+ 
+   
+   private void saveUmfAccountAnalyseToDb(Date _transfer_settle_date,Integer _data_type,Integer _status,Integer _all_trade_frequency,Long _all_trade_money,Integer _all_in_service_charge,Integer _all_out_service_charge){          
+        UmfAccountAnalyse _umfAccountAnalyseVO= new UmfAccountAnalyse();
+        _umfAccountAnalyseVO.setTransferSettleDate(_umfAccountAnalyseVO.getTransferSettleDate());
+        _umfAccountAnalyseVO.setDataType(_umfAccountAnalyseVO.getDataType());
+        _umfAccountAnalyseVO.setStatus(_umfAccountAnalyseVO.getStatus());
+        _umfAccountAnalyseVO.setAllTradeFrequency(_umfAccountAnalyseVO.getAllTradeFrequency());
+        _umfAccountAnalyseVO.setAllTradeMoney(_umfAccountAnalyseVO.getAllTradeMoney());
+        _umfAccountAnalyseVO.setAllInServiceCharge(_umfAccountAnalyseVO.getAllInServiceCharge());
+        _umfAccountAnalyseVO.setAllOutServiceCharge(_umfAccountAnalyseVO.getAllOutServiceCharge());
+        _umfAccountAnalyseServiceImpl.saveUmfAccountAnalyse(_umfAccountAnalyse);
+        }

@@ -1,0 +1,28 @@
+
+
+  SystemResult result = new SystemResult();
+		IdWorker _idWorker = new IdWorker();
+		
+		
+private void saveUmfAccountErrorToDb(Date _transfer_settle_date,Integer _data_type,String _order_id,Integer _umf_monye,Integer _iyd_money,String _error_message){	     	
+    	UmfAccountError _umfAccountError= new UmfAccountError();
+        _umfAccountError.setTransferSettleDate(_transfer_settle_date);
+        _umfAccountError.setDataType(_data_type);
+        _umfAccountError.setOrderId(_order_id);
+        _umfAccountError.setUmfMonye(_umf_monye);
+        _umfAccountError.setIydMoney(_iyd_money);
+        _umfAccountError.setErrorMessage(_error_message);
+        _umfAccountErrorServiceImpl.saveUmfAccountError(_umfAccountError);
+        }
+ 
+   
+   private void saveUmfAccountErrorToDb(Date _transfer_settle_date,Integer _data_type,String _order_id,Integer _umf_monye,Integer _iyd_money,String _error_message){          
+        UmfAccountError _umfAccountErrorVO= new UmfAccountError();
+        _umfAccountErrorVO.setTransferSettleDate(_umfAccountErrorVO.getTransferSettleDate());
+        _umfAccountErrorVO.setDataType(_umfAccountErrorVO.getDataType());
+        _umfAccountErrorVO.setOrderId(_umfAccountErrorVO.getOrderId());
+        _umfAccountErrorVO.setUmfMonye(_umfAccountErrorVO.getUmfMonye());
+        _umfAccountErrorVO.setIydMoney(_umfAccountErrorVO.getIydMoney());
+        _umfAccountErrorVO.setErrorMessage(_umfAccountErrorVO.getErrorMessage());
+        _umfAccountErrorServiceImpl.saveUmfAccountError(_umfAccountError);
+        }
